@@ -49,7 +49,7 @@ figma : https://www.figma.com/file/IuRK0VwACUUGyZwmnBG0v4/?node-id=1205%3A1637
 <br/>
 
 #### 운동 기록 상세조회
-<img src="https://user-images.githubusercontent.com/59338503/142013791-99aa3022-1a2e-4239-a246-910a0b3a8714.png" alt="운동기록상세조회" width="50%" height="50%"/>
+<img src="https://user-images.githubusercontent.com/59338503/142013791-99aa3022-1a2e-4239-a246-910a0b3a8714.png" alt="운동기록상세조회" width="25%" height="25%"/>
 <br/>
 
 ### 기능명세서
