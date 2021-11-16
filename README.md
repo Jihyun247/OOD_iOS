@@ -23,6 +23,7 @@
 ### 와이어프레임
 
 <img src="https://user-images.githubusercontent.com/59338503/142009050-d50e586f-d401-4449-ba2f-ed6dbff1132e.png" alt="와이어프레임" style="zoom:100%;" align="left"/>
+
 figma : https://www.figma.com/file/IuRK0VwACUUGyZwmnBG0v4/?node-id=1205%3A1637
 
 
