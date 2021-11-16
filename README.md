@@ -30,7 +30,7 @@ figma : https://www.figma.com/file/IuRK0VwACUUGyZwmnBG0v4/?node-id=1205%3A1637
 ### View
 
 #### 스플래쉬 & 로그인 & 회원가입
-<img src="https://user-images.githubusercontent.com/59338503/142013005-3ff7c0ac-d936-40af-ab58-413099293162.png" alt="스플래시로그인" style="zoom:1%;"/><img src="https://user-images.githubusercontent.com/59338503/142012560-1c9708b5-5eda-483f-933a-e51eb7f1cc75.png" alt="회원가입" style="zoom:1%;"/>
+<img src="https://user-images.githubusercontent.com/59338503/142013005-3ff7c0ac-d936-40af-ab58-413099293162.png" alt="스플래시로그인" width="50%" height="50%"/><img src="https://user-images.githubusercontent.com/59338503/142012560-1c9708b5-5eda-483f-933a-e51eb7f1cc75.png" alt="회원가입" width="50%" height="50%"/>
 
  #### 주간 캘린더 운동 기록 조회
  <img src="https://user-images.githubusercontent.com/59338503/142013433-d9ca906c-a86c-4ac7-8789-93e80a8c32f8.png" alt="주간캘린더" style="zoom:10%;">
