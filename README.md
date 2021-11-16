@@ -23,55 +23,36 @@
 ### 와이어프레임
 
 <img src="https://user-images.githubusercontent.com/59338503/142009050-d50e586f-d401-4449-ba2f-ed6dbff1132e.png" alt="와이어프레임" style="zoom:100%;" align="left"/>
-
-
-
-> figma : https://www.figma.com/file/IuRK0VwACUUGyZwmnBG0v4/?node-id=1205%3A1637
+figma : https://www.figma.com/file/IuRK0VwACUUGyZwmnBG0v4/?node-id=1205%3A1637
 
 
 
 ### View
 
->#### 스플래쉬 & 로그인 & 회원가입
->
-><img src="https://user-images.githubusercontent.com/59338503/142013005-3ff7c0ac-d936-40af-ab58-413099293162.png" alt="스플래시로그인" style="zoom:30%;" align="left"/>
->
-><img src="https://user-images.githubusercontent.com/59338503/142012560-1c9708b5-5eda-483f-933a-e51eb7f1cc75.png" alt="회원가입" style="zoom:30%;" align="left"/>
+#### 스플래쉬 & 로그인 & 회원가입
+<img src="https://user-images.githubusercontent.com/59338503/142013005-3ff7c0ac-d936-40af-ab58-413099293162.png" alt="스플래시로그인" style="zoom:30%;" align="left"/>
+<img src="https://user-images.githubusercontent.com/59338503/142012560-1c9708b5-5eda-483f-933a-e51eb7f1cc75.png" alt="회원가입" style="zoom:30%;" align="left"/>
 
 
 
-> #### 주간 캘린더 운동 기록 조회
->
-> <img src="https://user-images.githubusercontent.com/59338503/142013433-d9ca906c-a86c-4ac7-8789-93e80a8c32f8.png" alt="주간캘린더" style="zoom:30%;" align="left"/>
+ #### 주간 캘린더 운동 기록 조회
+ <img src="https://user-images.githubusercontent.com/59338503/142013433-d9ca906c-a86c-4ac7-8789-93e80a8c32f8.png" alt="주간캘린더" style="zoom:10%;" align="left"/>
 
+#### 마이페이지 & 설정
+<img src="https://user-images.githubusercontent.com/59338503/142013538-a8b95e0a-12d2-4b3a-a260-07977b3d0e74.png" alt="마이페이지설정" style="zoom:10%;" align="left"/>
 
+#### 운동 기록
+<img src="https://user-images.githubusercontent.com/59338503/142013741-8007d959-292c-4a0f-998b-919a350344d3.png" alt="운동기록" style="zoom:10%;" align="left"/>
 
-> #### 마이페이지 & 설정
->
-> <img src="https://user-images.githubusercontent.com/59338503/142013538-a8b95e0a-12d2-4b3a-a260-07977b3d0e74.png" alt="마이페이지설정" style="zoom:30%;" align="left"/>
-
-
-
-> #### 운동 기록
->
-> <img src="https://user-images.githubusercontent.com/59338503/142013741-8007d959-292c-4a0f-998b-919a350344d3.png" alt="운동기록" style="zoom:30%;" align="left"/>
-
-
-
-> #### 운동 기록 상세조회
->
-> <img src="https://user-images.githubusercontent.com/59338503/142013791-99aa3022-1a2e-4239-a246-910a0b3a8714.png" alt="운동기록상세조회" style="zoom:30%;" align="left"/>
-
-
+#### 운동 기록 상세조회
+<img src="https://user-images.githubusercontent.com/59338503/142013791-99aa3022-1a2e-4239-a246-910a0b3a8714.png" alt="운동기록상세조회" style="zoom:10%;" align="left"/>
 
 ### 기능명세서
-
 > 
 
 
 
 ### ERD
-
 > 
 
 
