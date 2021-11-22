@@ -1,28 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="OOD_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqd-7G-UrX">
+                                <rect key="frame" x="30" y="418" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YT2-HP-uDB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XMi-0M-dQu">
+                                <rect key="frame" x="30" y="488" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Wih-l8-bMW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWj-kj-jXa" userLabel="LogoContainView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="388"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OODlogo" translatesAutoresizingMaskIntoConstraints="NO" id="ags-I4-AGm">
+                                        <rect key="frame" x="132" y="216" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="KZ1-aY-eQS"/>
+                                            <constraint firstAttribute="width" secondItem="ags-I4-AGm" secondAttribute="height" multiplier="1:1" id="w4Q-ES-Qiu"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="388" id="GG0-bJ-Fbj"/>
+                                    <constraint firstItem="ags-I4-AGm" firstAttribute="centerY" secondItem="OWj-kj-jXa" secondAttribute="centerY" multiplier="1.5" id="RdH-u4-tfF"/>
+                                    <constraint firstItem="ags-I4-AGm" firstAttribute="centerX" secondItem="OWj-kj-jXa" secondAttribute="centerX" id="bWG-k6-aEV"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pj-lo-YKF">
+                                <rect key="frame" x="30" y="613" width="354" height="52"/>
+                                <color key="backgroundColor" name="OOD_blue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="cRQ-2z-LEj"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그인"/>
+                                <connections>
+                                    <action selector="loginButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fmX-Ia-Hpx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이미 존재하는 닉네임입니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8Z-KW-ACh">
+                                <rect key="frame" x="38" y="548" width="135" height="14.5"/>
+                                <color key="tintColor" name="OOD_blue"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="OOD_blue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38S-2a-hNO">
+                                <rect key="frame" x="294" y="540.5" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="AoU-3z-rZJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="iRc-dh-TGt"/>
+                                </constraints>
+                                <color key="tintColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="회원가입 하기">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signupButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mwg-iO-Ws5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1pj-lo-YKF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="0MK-SU-D3W"/>
+                            <constraint firstItem="OWj-kj-jXa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0ll-UX-y2K"/>
+                            <constraint firstItem="XMi-0M-dQu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="1qS-Gb-JxN"/>
+                            <constraint firstItem="38S-2a-hNO" firstAttribute="centerY" secondItem="C8Z-KW-ACh" secondAttribute="centerY" id="6JC-UY-Bc2"/>
+                            <constraint firstItem="C8Z-KW-ACh" firstAttribute="leading" secondItem="XMi-0M-dQu" secondAttribute="leading" constant="8" id="8yK-KL-1rE"/>
+                            <constraint firstItem="OWj-kj-jXa" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Eus-dB-grt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XMi-0M-dQu" secondAttribute="trailing" constant="30" id="KrM-Ru-fvT"/>
+                            <constraint firstItem="C8Z-KW-ACh" firstAttribute="top" secondItem="XMi-0M-dQu" secondAttribute="bottom" constant="10" id="Mnu-R5-NJI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OWj-kj-jXa" secondAttribute="trailing" id="NKA-6e-3gk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aqd-7G-UrX" secondAttribute="trailing" constant="30" id="Nnj-gd-qzo"/>
+                            <constraint firstItem="38S-2a-hNO" firstAttribute="trailing" secondItem="XMi-0M-dQu" secondAttribute="trailing" id="Un6-pT-74O"/>
+                            <constraint firstItem="aqd-7G-UrX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="UwO-HN-4yT"/>
+                            <constraint firstItem="XMi-0M-dQu" firstAttribute="top" secondItem="aqd-7G-UrX" secondAttribute="bottom" constant="20" id="Wip-I4-9Ak"/>
+                            <constraint firstItem="aqd-7G-UrX" firstAttribute="top" secondItem="OWj-kj-jXa" secondAttribute="bottom" constant="30" id="bCm-8G-jDW"/>
+                            <constraint firstItem="1pj-lo-YKF" firstAttribute="top" secondItem="XMi-0M-dQu" secondAttribute="bottom" constant="75" id="fFH-9T-R9H"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1pj-lo-YKF" secondAttribute="trailing" constant="30" id="tIc-xK-9Nj"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1AE-Uy-CLw"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="aqd-7G-UrX" id="tHn-yd-bnz"/>
+                        <outlet property="guideLabel" destination="C8Z-KW-ACh" id="xHa-ay-wVt"/>
+                        <outlet property="loginButton" destination="1pj-lo-YKF" id="vzk-yi-dFK"/>
+                        <outlet property="logoContainViewHeight" destination="GG0-bJ-Fbj" id="8zB-vy-OBo"/>
+                        <outlet property="passwordTextField" destination="XMi-0M-dQu" id="ncE-Dx-eeS"/>
+                        <outlet property="signupButton" destination="38S-2a-hNO" id="eiF-h0-DoK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="128.57142857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="V8G-6D-fpt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OLE-Gb-dlr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gqb-3a-Fle">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="8TV-op-QyJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heN-8L-C1T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
         </scene>
     </scenes>
     <resources>
+        <image name="OODlogo" width="1207" height="1207"/>
+        <namedColor name="OOD_blue">
+            <color red="0.46299999952316284" green="0.57999998331069946" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

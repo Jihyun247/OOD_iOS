@@ -25,6 +25,13 @@
 		B85D61FB274A4CE5008DFFB3 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85D61FA274A4CE5008DFFB3 /* Roboto-Medium.ttf */; };
 		B85D61FD274A4CF4008DFFB3 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B85D61FC274A4CF4008DFFB3 /* Rubik-Regular.ttf */; };
 		B85D6200274A4D53008DFFB3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B85D61FF274A4D53008DFFB3 /* Kingfisher */; };
+		B8613501274BB5F100E25A09 /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8613500274BB5F100E25A09 /* APITarget.swift */; };
+		B8613503274BB61D00E25A09 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8613502274BB61D00E25A09 /* APIService.swift */; };
+		B8613505274BB64300E25A09 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8613504274BB64300E25A09 /* NetworkResult.swift */; };
+		B8613507274BBD4000E25A09 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8613506274BBD4000E25A09 /* UIButton+Extension.swift */; };
+		B8613509274BDD0A00E25A09 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8613508274BDD0A00E25A09 /* UITextField+Extension.swift */; };
+		B861350B274BDD6500E25A09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B861350A274BDD6500E25A09 /* UIView+Extension.swift */; };
+		B861350D274BE45400E25A09 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B861350C274BE45400E25A09 /* UIFont+Extension.swift */; };
 		B8C14D472747EC24007C9DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C14D462747EC24007C9DEF /* AppDelegate.swift */; };
 		B8C14D492747EC24007C9DEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C14D482747EC24007C9DEF /* SceneDelegate.swift */; };
 		B8C14D4B2747EC24007C9DEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C14D4A2747EC24007C9DEF /* ViewController.swift */; };
@@ -51,6 +58,13 @@
 		B85D61F8274A4CC8008DFFB3 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		B85D61FA274A4CE5008DFFB3 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		B85D61FC274A4CF4008DFFB3 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		B8613500274BB5F100E25A09 /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
+		B8613502274BB61D00E25A09 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		B8613504274BB64300E25A09 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		B8613506274BBD4000E25A09 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		B8613508274BDD0A00E25A09 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		B861350A274BDD6500E25A09 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		B861350C274BE45400E25A09 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		B8C14D432747EC24007C9DEF /* OOD_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OOD_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C14D462747EC24007C9DEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8C14D482747EC24007C9DEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +105,10 @@
 		B85D61C12749D327008DFFB3 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B8613506274BBD4000E25A09 /* UIButton+Extension.swift */,
+				B8613508274BDD0A00E25A09 /* UITextField+Extension.swift */,
+				B861350A274BDD6500E25A09 /* UIView+Extension.swift */,
+				B861350C274BE45400E25A09 /* UIFont+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -278,6 +296,16 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		B86134FA274B839E00E25A09 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B8613500274BB5F100E25A09 /* APITarget.swift */,
+				B8613502274BB61D00E25A09 /* APIService.swift */,
+				B8613504274BB64300E25A09 /* NetworkResult.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		B8C14D3A2747EC24007C9DEF = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +325,7 @@
 		B8C14D452747EC24007C9DEF /* OOD_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B86134FA274B839E00E25A09 /* Service */,
 				B85D61C32749D34E008DFFB3 /* Asset */,
 				B85D61C12749D327008DFFB3 /* Extension */,
 				B85D61C02749D2F1008DFFB3 /* Screen */,
@@ -395,16 +424,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8613509274BDD0A00E25A09 /* UITextField+Extension.swift in Sources */,
 				B85D61D6274A464F008DFFB3 /* CertiViewController.swift in Sources */,
+				B861350B274BDD6500E25A09 /* UIView+Extension.swift in Sources */,
+				B8613501274BB5F100E25A09 /* APITarget.swift in Sources */,
 				B8C14D512747EC24007C9DEF /* OOD_iOS.xcdatamodeld in Sources */,
 				B85D61F5274A49C7008DFFB3 /* SignupViewController.swift in Sources */,
 				B85D61DB274A4696008DFFB3 /* MypageViewController.swift in Sources */,
 				B85D61E0274A46AE008DFFB3 /* SettingViewController.swift in Sources */,
+				B8613505274BB64300E25A09 /* NetworkResult.swift in Sources */,
 				B85D61E5274A48FF008DFFB3 /* PostCertiViewController.swift in Sources */,
+				B861350D274BE45400E25A09 /* UIFont+Extension.swift in Sources */,
 				B8C14D4B2747EC24007C9DEF /* ViewController.swift in Sources */,
 				B8C14D472747EC24007C9DEF /* AppDelegate.swift in Sources */,
+				B8613503274BB61D00E25A09 /* APIService.swift in Sources */,
 				B85D61D0274A4252008DFFB3 /* LoginViewController.swift in Sources */,
 				B8C14D492747EC24007C9DEF /* SceneDelegate.swift in Sources */,
+				B8613507274BBD4000E25A09 /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
