@@ -5,6 +5,14 @@
 ## 오늘은 운동해야지 (OOD)
 <br/>
 
+### [개발일지?일기ㅎㅎ]
+
+> https://velog.io/@gaebokchi/series/OOD
+
+<br/>
+
+
+
 
 ### [서비스 소개]
 
