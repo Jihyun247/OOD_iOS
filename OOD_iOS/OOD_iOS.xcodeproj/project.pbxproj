@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B808CA6C274E259F00E26484 /* SignupPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B808CA6B274E259F00E26484 /* SignupPageViewController.swift */; };
+		B808CA6E274E297500E26484 /* SignupFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B808CA6D274E297500E26484 /* SignupFirstViewController.swift */; };
+		B808CA70274E298B00E26484 /* SignupSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B808CA6F274E298B00E26484 /* SignupSecondViewController.swift */; };
+		B808CA72274E4BD800E26484 /* SignupDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B808CA71274E4BD800E26484 /* SignupDoneViewController.swift */; };
+		B808CA74274E924D00E26484 /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B808CA73274E924D00E26484 /* SignupData.swift */; };
 		B8563956274CA86F000799B3 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8563955274CA86F000799B3 /* GenericResponse.swift */; };
 		B8563958274CAAAA000799B3 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8563957274CAAAA000799B3 /* LoginData.swift */; };
 		B85D61CC274A36CE008DFFB3 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B85D61CB274A36CE008DFFB3 /* Moya */; };
@@ -44,6 +49,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B808CA6B274E259F00E26484 /* SignupPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPageViewController.swift; sourceTree = "<group>"; };
+		B808CA6D274E297500E26484 /* SignupFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFirstViewController.swift; sourceTree = "<group>"; };
+		B808CA6F274E298B00E26484 /* SignupSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSecondViewController.swift; sourceTree = "<group>"; };
+		B808CA71274E4BD800E26484 /* SignupDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDoneViewController.swift; sourceTree = "<group>"; };
+		B808CA73274E924D00E26484 /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
 		B8563955274CA86F000799B3 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		B8563957274CAAAA000799B3 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		B85D61CD274A423D008DFFB3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -98,6 +108,7 @@
 			children = (
 				B8563955274CA86F000799B3 /* GenericResponse.swift */,
 				B8563957274CAAAA000799B3 /* LoginData.swift */,
+				B808CA73274E924D00E26484 /* SignupData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +292,10 @@
 			isa = PBXGroup;
 			children = (
 				B85D61F4274A49C7008DFFB3 /* SignupViewController.swift */,
+				B808CA6B274E259F00E26484 /* SignupPageViewController.swift */,
+				B808CA6D274E297500E26484 /* SignupFirstViewController.swift */,
+				B808CA6F274E298B00E26484 /* SignupSecondViewController.swift */,
+				B808CA71274E4BD800E26484 /* SignupDoneViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -446,6 +461,8 @@
 				B8C14D512747EC24007C9DEF /* OOD_iOS.xcdatamodeld in Sources */,
 				B85D61F5274A49C7008DFFB3 /* SignupViewController.swift in Sources */,
 				B85D61DB274A4696008DFFB3 /* MypageViewController.swift in Sources */,
+				B808CA72274E4BD800E26484 /* SignupDoneViewController.swift in Sources */,
+				B808CA70274E298B00E26484 /* SignupSecondViewController.swift in Sources */,
 				B85D61E0274A46AE008DFFB3 /* SettingViewController.swift in Sources */,
 				B8613505274BB64300E25A09 /* NetworkResult.swift in Sources */,
 				B85D61E5274A48FF008DFFB3 /* PostCertiViewController.swift in Sources */,
@@ -453,6 +470,9 @@
 				B8C14D4B2747EC24007C9DEF /* ViewController.swift in Sources */,
 				B8C14D472747EC24007C9DEF /* AppDelegate.swift in Sources */,
 				B8613503274BB61D00E25A09 /* APIService.swift in Sources */,
+				B808CA6C274E259F00E26484 /* SignupPageViewController.swift in Sources */,
+				B808CA6E274E297500E26484 /* SignupFirstViewController.swift in Sources */,
+				B808CA74274E924D00E26484 /* SignupData.swift in Sources */,
 				B8563958274CAAAA000799B3 /* LoginData.swift in Sources */,
 				B85D61D0274A4252008DFFB3 /* LoginViewController.swift in Sources */,
 				B8C14D492747EC24007C9DEF /* SceneDelegate.swift in Sources */,

@@ -31,12 +31,15 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         logoContainViewHeight.constant = 388*deviceHeight
         
         setTextFieldUI()
         setButtonUI()
         setLabelUI()
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
     }
     
     // MARK: - func
@@ -54,11 +57,15 @@ class LoginViewController: UIViewController {
     func setButtonUI() {
         loginButton.applyGradient(colors: [UIColor(named: "OOD_purple")?.cgColor, UIColor(named: "OOD_blue")?.cgColor])
         loginButton.setBorderColorAndRadius(borderColor: nil, borderWidth: 0, cornerRadius: 8.0)
-        loginButton.titleLabel?.font = UIFont.notoSansBold(size: 16.0)
+        let loginBtnTitle = NSMutableAttributedString(string: "로그인")
+        loginBtnTitle.addAttribute(.font, value: UIFont.notoSansBold(size: 16.0)!, range: NSRange(location: 0, length: loginBtnTitle.length))
+        loginButton.setAttributedTitle(loginBtnTitle, for: .normal)
         loginButton.titleLabel?.textColor = .white
         
-        signupButton.titleLabel?.font = UIFont.notoSansMedium(size: 11.0)
-        signupButton.titleLabel?.textColor = .systemGray3
+        let signupBtnTitle = NSMutableAttributedString(string: "회원가입 하기")
+        signupBtnTitle.addAttribute(.font, value: UIFont.notoSansMedium(size: 11.0)!, range: NSRange(location: 0, length: signupBtnTitle.length))
+        signupButton.setAttributedTitle(signupBtnTitle, for: .normal)
+        signupButton.titleLabel?.textColor = .systemGray2
     }
     
     func setLabelUI() {
@@ -110,9 +117,10 @@ class LoginViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func signupButton(_ sender: UIButton) {
+
         guard let signupVC = UIStoryboard(name: "Signup", bundle: nil).instantiateViewController(withIdentifier: "SignupViewController") as? SignupViewController else {return}
         
-        self.navigationController?.pushViewController(signupVC, animated: true)
+        navigationController?.pushViewController(signupVC, animated: true)
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
