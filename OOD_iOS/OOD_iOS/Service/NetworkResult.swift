@@ -9,8 +9,8 @@ import Foundation
 
 enum NetworkResult<T> {
     case success(T)
-    case requestErr(T)
+    case failure(T)
     case pathErr
-    case serverErr
-    case networkFail
+    case requestErr(T)
+    // moya 테스트 해보니 .success 또는 .failure가 뜸
 }

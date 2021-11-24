@@ -25,7 +25,7 @@ enum APITarget { // 토큰 쿼리 파라미터 바디 모두 입력
 
 extension APITarget: TargetType {
     var baseURL: URL {
-        return URL(string: "http://15.164.186.213")!
+        return URL(string: "http://15.164.186.213:3000")!
     }
     
     var path: String { // path에 들어갈 파라미터 넣어주기

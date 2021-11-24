@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
     // MARK: - parameter
     
     let deviceHeight = UIScreen.main.bounds.height/896
+    var loginData: LoginData?
     
     
     // MARK: - viewDidLoad
@@ -63,6 +64,43 @@ class LoginViewController: UIViewController {
     func setLabelUI() {
         guideLabel.font = UIFont.notoSansMedium(size: 12.0)
         guideLabel.textColor = UIColor(named: "OOD_blue")
+        guideLabel.isHidden = true
+    }
+    
+    func showGuideLabel(_ msg: String) {
+        self.guideLabel.text = msg
+        self.guideLabel.isHidden = false
+    }
+    
+    func login(email: String, password: String) {
+        APIService.shared.login(email, password) { result in
+            switch result {
+            case .success(let resultData):
+                self.loginData = resultData as? LoginData
+                
+                if let data = self.loginData {
+                    UserDefaults.standard.setValue(data.token, forKey: "token")
+                    
+                    guard let certiVC = UIStoryboard(name: "Certification", bundle: nil).instantiateViewController(withIdentifier: "CertiViewController") as? CertiViewController else {return}
+                    certiVC.modalPresentationStyle = .fullScreen
+                    self.present(certiVC, animated: true, completion: nil)
+                }
+            case .requestErr(let message):
+                if let msg = message as? String {
+                    if msg == "필요한 값이 없습니다." {
+                        self.showGuideLabel("이메일과 비밀번호 모두 입력해주세요")
+                    } else if msg == "존재하지않는 유저 id 입니다." {
+                        self.showGuideLabel("없는 회원 정보입니다")
+                    } else if msg == "비밀번호가 일치하지 않습니다" {
+                        self.showGuideLabel(msg)
+                    }
+                }
+            case .pathErr:
+                print("pathErr")
+            case .failure(let err):
+                print(err)
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -72,13 +110,16 @@ class LoginViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func signupButton(_ sender: UIButton) {
-        guard let vc = UIStoryboard(name: "Signup", bundle: nil).instantiateViewController(withIdentifier: "SignupViewController") as? SignupViewController else {return}
+        guard let signupVC = UIStoryboard(name: "Signup", bundle: nil).instantiateViewController(withIdentifier: "SignupViewController") as? SignupViewController else {return}
         
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(signupVC, animated: true)
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
         self.view.endEditing(true)
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            login(email: email, password: password)
+        }
     }
 }
 
