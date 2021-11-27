@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>UIMainStoryboardFile</key>
-	<string>Login</string>
+	<string>Certification</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Rubik-Regular.ttf</string>
@@ -31,7 +31,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Login</string>
+					<string>Certification</string>
 				</dict>
 			</array>
 		</dict>

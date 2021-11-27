@@ -12,6 +12,9 @@
 		B808CA70274E298B00E26484 /* SignupSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B808CA6F274E298B00E26484 /* SignupSecondViewController.swift */; };
 		B808CA72274E4BD800E26484 /* SignupDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B808CA71274E4BD800E26484 /* SignupDoneViewController.swift */; };
 		B808CA74274E924D00E26484 /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B808CA73274E924D00E26484 /* SignupData.swift */; };
+		B843F10D2751EE60004EAC9A /* CertiListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F10C2751EE60004EAC9A /* CertiListData.swift */; };
+		B843F10F2751F4F8004EAC9A /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F10E2751F4F8004EAC9A /* UIImageView.swift */; };
+		B843F111275207B5004EAC9A /* CertiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F110275207B5004EAC9A /* CertiDetailViewController.swift */; };
 		B8563956274CA86F000799B3 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8563955274CA86F000799B3 /* GenericResponse.swift */; };
 		B8563958274CAAAA000799B3 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8563957274CAAAA000799B3 /* LoginData.swift */; };
 		B85D61CC274A36CE008DFFB3 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B85D61CB274A36CE008DFFB3 /* Moya */; };
@@ -46,6 +49,11 @@
 		B8C14D512747EC24007C9DEF /* OOD_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8C14D4F2747EC24007C9DEF /* OOD_iOS.xcdatamodeld */; };
 		B8C14D532747EC25007C9DEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8C14D522747EC25007C9DEF /* Assets.xcassets */; };
 		B8C14D562747EC25007C9DEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C14D542747EC25007C9DEF /* LaunchScreen.storyboard */; };
+		B8C338DA2750C6E700D5E59A /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C338D92750C6E700D5E59A /* UINavigationBar+Extension.swift */; };
+		B8C6EC2C274F86D700391136 /* CertiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C6EC2A274F86D700391136 /* CertiCollectionViewCell.swift */; };
+		B8C6EC2D274F86D700391136 /* CertiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C6EC2B274F86D700391136 /* CertiCollectionViewCell.xib */; };
+		B8C6EC2F274F9D0000391136 /* CertiCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C6EC2E274F9D0000391136 /* CertiCollectionReusableView.swift */; };
+		B8C6EC32274FBFD300391136 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B8C6EC31274FBFD300391136 /* FSCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +62,9 @@
 		B808CA6F274E298B00E26484 /* SignupSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupSecondViewController.swift; sourceTree = "<group>"; };
 		B808CA71274E4BD800E26484 /* SignupDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDoneViewController.swift; sourceTree = "<group>"; };
 		B808CA73274E924D00E26484 /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
+		B843F10C2751EE60004EAC9A /* CertiListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiListData.swift; sourceTree = "<group>"; };
+		B843F10E2751F4F8004EAC9A /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		B843F110275207B5004EAC9A /* CertiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiDetailViewController.swift; sourceTree = "<group>"; };
 		B8563955274CA86F000799B3 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		B8563957274CAAAA000799B3 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		B85D61CD274A423D008DFFB3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -88,6 +99,10 @@
 		B8C14D522747EC25007C9DEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8C14D552747EC25007C9DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8C14D572747EC25007C9DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8C338D92750C6E700D5E59A /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
+		B8C6EC2A274F86D700391136 /* CertiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiCollectionViewCell.swift; sourceTree = "<group>"; };
+		B8C6EC2B274F86D700391136 /* CertiCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CertiCollectionViewCell.xib; sourceTree = "<group>"; };
+		B8C6EC2E274F9D0000391136 /* CertiCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B85D6200274A4D53008DFFB3 /* Kingfisher in Frameworks */,
+				B8C6EC32274FBFD300391136 /* FSCalendar in Frameworks */,
 				B85D61CC274A36CE008DFFB3 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +125,7 @@
 				B8563955274CA86F000799B3 /* GenericResponse.swift */,
 				B8563957274CAAAA000799B3 /* LoginData.swift */,
 				B808CA73274E924D00E26484 /* SignupData.swift */,
+				B843F10C2751EE60004EAC9A /* CertiListData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +150,8 @@
 				B8613508274BDD0A00E25A09 /* UITextField+Extension.swift */,
 				B861350A274BDD6500E25A09 /* UIView+Extension.swift */,
 				B861350C274BE45400E25A09 /* UIFont+Extension.swift */,
+				B8C338D92750C6E700D5E59A /* UINavigationBar+Extension.swift */,
+				B843F10E2751F4F8004EAC9A /* UIImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -276,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				B85D61D3274A4646008DFFB3 /* Certification.storyboard */,
+				B8C6EC2B274F86D700391136 /* CertiCollectionViewCell.xib */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -284,6 +304,9 @@
 			isa = PBXGroup;
 			children = (
 				B85D61D5274A464F008DFFB3 /* CertiViewController.swift */,
+				B8C6EC2A274F86D700391136 /* CertiCollectionViewCell.swift */,
+				B8C6EC2E274F9D0000391136 /* CertiCollectionReusableView.swift */,
+				B843F110275207B5004EAC9A /* CertiDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -383,6 +406,7 @@
 			packageProductDependencies = (
 				B85D61CB274A36CE008DFFB3 /* Moya */,
 				B85D61FF274A4D53008DFFB3 /* Kingfisher */,
+				B8C6EC31274FBFD300391136 /* FSCalendar */,
 			);
 			productName = OOD_iOS;
 			productReference = B8C14D432747EC24007C9DEF /* OOD_iOS.app */;
@@ -415,6 +439,7 @@
 			packageReferences = (
 				B85D61CA274A36CE008DFFB3 /* XCRemoteSwiftPackageReference "Moya" */,
 				B85D61FE274A4D53008DFFB3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B8C6EC30274FBFD300391136 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = B8C14D442747EC24007C9DEF /* Products */;
 			projectDirPath = "";
@@ -442,6 +467,7 @@
 				B8C14D532747EC25007C9DEF /* Assets.xcassets in Resources */,
 				B85D61FD274A4CF4008DFFB3 /* Rubik-Regular.ttf in Resources */,
 				B85D61F9274A4CC8008DFFB3 /* NotoSansKR-Medium.otf in Resources */,
+				B8C6EC2D274F86D700391136 /* CertiCollectionViewCell.xib in Resources */,
 				B8C14D4E2747EC24007C9DEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,14 +481,18 @@
 			files = (
 				B8563956274CA86F000799B3 /* GenericResponse.swift in Sources */,
 				B8613509274BDD0A00E25A09 /* UITextField+Extension.swift in Sources */,
+				B8C6EC2C274F86D700391136 /* CertiCollectionViewCell.swift in Sources */,
+				B843F10F2751F4F8004EAC9A /* UIImageView.swift in Sources */,
 				B85D61D6274A464F008DFFB3 /* CertiViewController.swift in Sources */,
 				B861350B274BDD6500E25A09 /* UIView+Extension.swift in Sources */,
 				B8613501274BB5F100E25A09 /* APITarget.swift in Sources */,
 				B8C14D512747EC24007C9DEF /* OOD_iOS.xcdatamodeld in Sources */,
+				B843F10D2751EE60004EAC9A /* CertiListData.swift in Sources */,
 				B85D61F5274A49C7008DFFB3 /* SignupViewController.swift in Sources */,
 				B85D61DB274A4696008DFFB3 /* MypageViewController.swift in Sources */,
 				B808CA72274E4BD800E26484 /* SignupDoneViewController.swift in Sources */,
 				B808CA70274E298B00E26484 /* SignupSecondViewController.swift in Sources */,
+				B843F111275207B5004EAC9A /* CertiDetailViewController.swift in Sources */,
 				B85D61E0274A46AE008DFFB3 /* SettingViewController.swift in Sources */,
 				B8613505274BB64300E25A09 /* NetworkResult.swift in Sources */,
 				B85D61E5274A48FF008DFFB3 /* PostCertiViewController.swift in Sources */,
@@ -471,9 +501,11 @@
 				B8C14D472747EC24007C9DEF /* AppDelegate.swift in Sources */,
 				B8613503274BB61D00E25A09 /* APIService.swift in Sources */,
 				B808CA6C274E259F00E26484 /* SignupPageViewController.swift in Sources */,
+				B8C6EC2F274F9D0000391136 /* CertiCollectionReusableView.swift in Sources */,
 				B808CA6E274E297500E26484 /* SignupFirstViewController.swift in Sources */,
 				B808CA74274E924D00E26484 /* SignupData.swift in Sources */,
 				B8563958274CAAAA000799B3 /* LoginData.swift in Sources */,
+				B8C338DA2750C6E700D5E59A /* UINavigationBar+Extension.swift in Sources */,
 				B85D61D0274A4252008DFFB3 /* LoginViewController.swift in Sources */,
 				B8C14D492747EC24007C9DEF /* SceneDelegate.swift in Sources */,
 				B8613507274BBD4000E25A09 /* UIButton+Extension.swift in Sources */,
@@ -716,6 +748,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		B8C6EC30274FBFD300391136 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -728,6 +768,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B85D61FE274A4D53008DFFB3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		B8C6EC31274FBFD300391136 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8C6EC30274FBFD300391136 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -16,6 +16,16 @@ extension UIView {
         self.layer.masksToBounds = true
     }
     
+    func applyViewGradient(colors: [CGColor?]) {
+        let gradientLayer = CAGradientLayer()
+        let cArray: [CGColor] = colors.compactMap{$0}
+        gradientLayer.colors = cArray
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        gradientLayer.frame = self.bounds
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
 //    func setCornerRadius(cornerRadius: CGFloat) {
 //        self.
 //    }

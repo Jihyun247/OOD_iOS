@@ -12,5 +12,4 @@ enum NetworkResult<T> {
     case failure(T)
     case pathErr
     case requestErr(T)
-    // moya 테스트 해보니 .success 또는 .failure가 뜸
 }

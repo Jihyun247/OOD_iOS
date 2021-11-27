@@ -43,7 +43,6 @@ class SignupViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // segue 지정해주니 되었음 왜 되냐 ?
         pageVC = segue.destination as? SignupPageViewController
         if let signupFirstVC = pageVC?.vcArray[0] as? SignupFirstViewController {
             signupFirstVC.nextBtnDelegate = self

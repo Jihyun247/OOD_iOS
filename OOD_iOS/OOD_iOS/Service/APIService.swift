@@ -7,12 +7,15 @@
 
 import Foundation
 import Moya
+import SwiftUI
 
 struct APIService {
     
     static let shared = APIService()
     
     let provider = MoyaProvider<APITarget>()
+    
+    //MARK: - AUTH API
     
     func login(_ email: String, _ password: String, completion: @escaping (NetworkResult<Any>)->()) {
         
@@ -37,7 +40,6 @@ struct APIService {
                 
             }
         }
-        
     }
     
     func signup(_ nickname: String, _ email: String, _ password: String, _ exCycle: Int, completion: @escaping (NetworkResult<Any>)->()) {
@@ -47,7 +49,7 @@ struct APIService {
         provider.request(target) { result in
             switch result {
             case .success(let response):
-
+            
                 guard let decodedData = try? JSONDecoder().decode(GenericResponse<SignupData>.self, from: response.data) else {
                     return completion(.pathErr)
                 }
@@ -63,8 +65,34 @@ struct APIService {
                 
             }
         }
+    }
+    
+    //MARK: - CERTIFICATION API
+    
+    func certiListByCal(token: String, date: String, completion: @escaping (NetworkResult<Any>)->()) {
         
+        let target: APITarget = .certiByCal(token: token, date: date)
+        
+        provider.request(target) { result in
+            switch result {
+            case .success(let response):
+                
+                guard let decodedData = try? JSONDecoder().decode(GenericResponse<[CertiListData]>.self, from: response.data) else {
+                    return completion(.pathErr)
+                }
+                print(decodedData)
+                guard let data = decodedData.data else {
+                    return completion(.requestErr(decodedData.message))
+                }
+                
+                completion(.success(data))
+
+            case .failure(let err):
+                completion(.failure(err))
+            }
+        }
     }
     
     
 }
+
