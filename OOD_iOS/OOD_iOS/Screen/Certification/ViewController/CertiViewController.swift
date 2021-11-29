@@ -32,6 +32,7 @@ class CertiViewController: UIViewController{
             
             DispatchQueue.main.async {
                 self.collectionViewHeight.constant = self.certiCollectionView.contentSize.height
+                self.certiCollectionView.isHidden = false
             }
         }
     }
@@ -40,6 +41,7 @@ class CertiViewController: UIViewController{
     
     @IBOutlet weak var certiCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var calendarViewHeight: NSLayoutConstraint!
     // 캘린더뷰 Height도 디바이스에 따라 조절해주기
     
     @IBOutlet weak var calendarView: FSCalendar!
@@ -70,10 +72,7 @@ class CertiViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let todayDate = self.queryDF.string(from: today)
-        if let token = UserDefaults.standard.string(forKey: "token") {
-            certiListByCal(token: token, date: selectedDate ?? todayDate)
-        }
+        
     }
     
     //MARK: - func
@@ -89,6 +88,11 @@ class CertiViewController: UIViewController{
         
         let nibName = UINib(nibName: CertiCollectionViewCell.identifier, bundle: nil)
         certiCollectionView.register(nibName, forCellWithReuseIdentifier: CertiCollectionViewCell.identifier)
+        
+        let todayDate = self.queryDF.string(from: today)
+        if let token = UserDefaults.standard.string(forKey: "token") {
+            certiListByCal(token: token, date: selectedDate ?? todayDate)
+        }
     }
     
     func setCalendarView() {
@@ -110,6 +114,7 @@ class CertiViewController: UIViewController{
         
         calendarHeaderLabel.text = self.calendarHeaderDF.string(from: calendarView.currentPage)
         
+        calendarViewHeight.constant = deviceHeight * 120
     }
     
     func setDateFormat() {
@@ -157,12 +162,10 @@ class CertiViewController: UIViewController{
     func certiListByCal(token: String, date: String) {
         APIService.shared.certiListByCal(token: token, date: date) { result in
             switch result {
-            case .success(let data):
-                print(data)
-                self.certiListData = data as? [CertiListData] ?? []
+            case .success(let resultData):
+                self.certiListData = resultData as? [CertiListData] ?? []
             case .requestErr(let message):
-                print("requestErr")
-                print(message)
+                print("requestErr", message)
             case .pathErr:
                 print("pathErr")
             case .failure(let err):
@@ -183,6 +186,10 @@ class CertiViewController: UIViewController{
     
     
     @IBAction func addCertiButtonClicked(_ sender: UIButton) {
+        
+        guard let certiUploadVC = self.storyboard?.instantiateViewController(withIdentifier: "CertiTimeSelectViewController") as? CertiTimeSelectViewController else {return}
+        
+        navigationController?.pushViewController(certiUploadVC, animated: true)
     }
     
     @IBAction func mypageButtonClicked(_ sender: UIBarButtonItem) {
@@ -220,6 +227,7 @@ extension CertiViewController: UICollectionViewDelegate, UICollectionViewDataSou
         }
         
         cell.certiImageView.setKFImage(from: certiListData[indexPath.row].imageUrl ?? "")
+        cell.certiImageView.contentMode = .scaleAspectFill
         cell.setBorderColorAndRadius(borderColor: .clear, borderWidth: 0, cornerRadius: 8)
         
         return cell

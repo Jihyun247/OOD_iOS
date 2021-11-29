@@ -13,8 +13,11 @@
 		B808CA72274E4BD800E26484 /* SignupDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B808CA71274E4BD800E26484 /* SignupDoneViewController.swift */; };
 		B808CA74274E924D00E26484 /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B808CA73274E924D00E26484 /* SignupData.swift */; };
 		B843F10D2751EE60004EAC9A /* CertiListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F10C2751EE60004EAC9A /* CertiListData.swift */; };
-		B843F10F2751F4F8004EAC9A /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F10E2751F4F8004EAC9A /* UIImageView.swift */; };
 		B843F111275207B5004EAC9A /* CertiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F110275207B5004EAC9A /* CertiDetailViewController.swift */; };
+		B843F11427527DD6004EAC9A /* CertiDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F11327527DD6004EAC9A /* CertiDetailData.swift */; };
+		B843F11827529743004EAC9A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F11727529743004EAC9A /* UIImageView+Extension.swift */; };
+		B843F11A27529AEE004EAC9A /* UILabel+Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F11927529AEE004EAC9A /* UILabel+Class.swift */; };
+		B843F11C2752ADC6004EAC9A /* SimpleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B843F11B2752ADC6004EAC9A /* SimpleResponse.swift */; };
 		B8563956274CA86F000799B3 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8563955274CA86F000799B3 /* GenericResponse.swift */; };
 		B8563958274CAAAA000799B3 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8563957274CAAAA000799B3 /* LoginData.swift */; };
 		B85D61CC274A36CE008DFFB3 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = B85D61CB274A36CE008DFFB3 /* Moya */; };
@@ -42,6 +45,18 @@
 		B8613509274BDD0A00E25A09 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8613508274BDD0A00E25A09 /* UITextField+Extension.swift */; };
 		B861350B274BDD6500E25A09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B861350A274BDD6500E25A09 /* UIView+Extension.swift */; };
 		B861350D274BE45400E25A09 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B861350C274BE45400E25A09 /* UIFont+Extension.swift */; };
+		B8A0A72E2753263600A3EBBE /* MypageCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0A72D2753263600A3EBBE /* MypageCollectionReusableView.swift */; };
+		B8A0A7302753267B00A3EBBE /* MypageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0A72F2753267B00A3EBBE /* MypageCollectionViewCell.swift */; };
+		B8A0A732275393CC00A3EBBE /* CertiUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0A731275393CC00A3EBBE /* CertiUploadViewController.swift */; };
+		B8A70D002753B7870008E519 /* CertiTimeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A70CFF2753B7870008E519 /* CertiTimeSelectViewController.swift */; };
+		B8A70D022753B79F0008E519 /* CertiSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A70D012753B79F0008E519 /* CertiSelectViewController.swift */; };
+		B8A70D072754308A0008E519 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A70D062754308A0008E519 /* Camera.storyboard */; };
+		B8A70D092754353C0008E519 /* CameraNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A70D082754353C0008E519 /* CameraNavigationViewController.swift */; };
+		B8A70D0B2754395D0008E519 /* TimeStampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A70D0A2754395D0008E519 /* TimeStampViewController.swift */; };
+		B8A70D0D27543D7A0008E519 /* TimeStampCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A70D0C27543D7A0008E519 /* TimeStampCheckViewController.swift */; };
+		B8A70D0F27543DFB0008E519 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A70D0E27543DFB0008E519 /* Date+Extension.swift */; };
+		B8A70D1127543F200008E519 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A70D1027543F200008E519 /* String+Extension.swift */; };
+		B8A70D1327543FE60008E519 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A70D1227543FE60008E519 /* UIImage+Extension.swift */; };
 		B8C14D472747EC24007C9DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C14D462747EC24007C9DEF /* AppDelegate.swift */; };
 		B8C14D492747EC24007C9DEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C14D482747EC24007C9DEF /* SceneDelegate.swift */; };
 		B8C14D4B2747EC24007C9DEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C14D4A2747EC24007C9DEF /* ViewController.swift */; };
@@ -63,8 +78,11 @@
 		B808CA71274E4BD800E26484 /* SignupDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDoneViewController.swift; sourceTree = "<group>"; };
 		B808CA73274E924D00E26484 /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
 		B843F10C2751EE60004EAC9A /* CertiListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiListData.swift; sourceTree = "<group>"; };
-		B843F10E2751F4F8004EAC9A /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		B843F110275207B5004EAC9A /* CertiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiDetailViewController.swift; sourceTree = "<group>"; };
+		B843F11327527DD6004EAC9A /* CertiDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiDetailData.swift; sourceTree = "<group>"; };
+		B843F11727529743004EAC9A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		B843F11927529AEE004EAC9A /* UILabel+Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Class.swift"; sourceTree = "<group>"; };
+		B843F11B2752ADC6004EAC9A /* SimpleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleResponse.swift; sourceTree = "<group>"; };
 		B8563955274CA86F000799B3 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		B8563957274CAAAA000799B3 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		B85D61CD274A423D008DFFB3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -90,6 +108,18 @@
 		B8613508274BDD0A00E25A09 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		B861350A274BDD6500E25A09 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B861350C274BE45400E25A09 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		B8A0A72D2753263600A3EBBE /* MypageCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageCollectionReusableView.swift; sourceTree = "<group>"; };
+		B8A0A72F2753267B00A3EBBE /* MypageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageCollectionViewCell.swift; sourceTree = "<group>"; };
+		B8A0A731275393CC00A3EBBE /* CertiUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiUploadViewController.swift; sourceTree = "<group>"; };
+		B8A70CFF2753B7870008E519 /* CertiTimeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiTimeSelectViewController.swift; sourceTree = "<group>"; };
+		B8A70D012753B79F0008E519 /* CertiSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiSelectViewController.swift; sourceTree = "<group>"; };
+		B8A70D062754308A0008E519 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		B8A70D082754353C0008E519 /* CameraNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraNavigationViewController.swift; sourceTree = "<group>"; };
+		B8A70D0A2754395D0008E519 /* TimeStampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStampViewController.swift; sourceTree = "<group>"; };
+		B8A70D0C27543D7A0008E519 /* TimeStampCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStampCheckViewController.swift; sourceTree = "<group>"; };
+		B8A70D0E27543DFB0008E519 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		B8A70D1027543F200008E519 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		B8A70D1227543FE60008E519 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		B8C14D432747EC24007C9DEF /* OOD_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OOD_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C14D462747EC24007C9DEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8C14D482747EC24007C9DEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B843F11227524D54004EAC9A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B8C6EC2A274F86D700391136 /* CertiCollectionViewCell.swift */,
+				B8C6EC2E274F9D0000391136 /* CertiCollectionReusableView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		B8563954274CA862000799B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +165,8 @@
 				B8563957274CAAAA000799B3 /* LoginData.swift */,
 				B808CA73274E924D00E26484 /* SignupData.swift */,
 				B843F10C2751EE60004EAC9A /* CertiListData.swift */,
+				B843F11327527DD6004EAC9A /* CertiDetailData.swift */,
+				B843F11B2752ADC6004EAC9A /* SimpleResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +174,7 @@
 		B85D61C02749D2F1008DFFB3 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				B8A70D03275430650008E519 /* Camera */,
 				B85D61E1274A48DE008DFFB3 /* PostCerti */,
 				B85D61DC274A469C008DFFB3 /* Setting */,
 				B85D61D7274A4680008DFFB3 /* Mypage */,
@@ -151,7 +193,11 @@
 				B861350A274BDD6500E25A09 /* UIView+Extension.swift */,
 				B861350C274BE45400E25A09 /* UIFont+Extension.swift */,
 				B8C338D92750C6E700D5E59A /* UINavigationBar+Extension.swift */,
-				B843F10E2751F4F8004EAC9A /* UIImageView.swift */,
+				B843F11727529743004EAC9A /* UIImageView+Extension.swift */,
+				B843F11927529AEE004EAC9A /* UILabel+Class.swift */,
+				B8A70D0E27543DFB0008E519 /* Date+Extension.swift */,
+				B8A70D1027543F200008E519 /* String+Extension.swift */,
+				B8A70D1227543FE60008E519 /* UIImage+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -210,6 +256,7 @@
 		B85D61D1274A4629008DFFB3 /* Certification */ = {
 			isa = PBXGroup;
 			children = (
+				B843F11227524D54004EAC9A /* Cell */,
 				B85D61ED274A4969008DFFB3 /* ViewController */,
 				B85D61EC274A4962008DFFB3 /* Storyboard */,
 			);
@@ -219,6 +266,7 @@
 		B85D61D7274A4680008DFFB3 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				B8A0A72C275325F200A3EBBE /* Cell */,
 				B85D61EB274A4955008DFFB3 /* ViewController */,
 				B85D61EA274A494E008DFFB3 /* Storyboard */,
 			);
@@ -304,9 +352,10 @@
 			isa = PBXGroup;
 			children = (
 				B85D61D5274A464F008DFFB3 /* CertiViewController.swift */,
-				B8C6EC2A274F86D700391136 /* CertiCollectionViewCell.swift */,
-				B8C6EC2E274F9D0000391136 /* CertiCollectionReusableView.swift */,
 				B843F110275207B5004EAC9A /* CertiDetailViewController.swift */,
+				B8A0A731275393CC00A3EBBE /* CertiUploadViewController.swift */,
+				B8A70CFF2753B7870008E519 /* CertiTimeSelectViewController.swift */,
+				B8A70D012753B79F0008E519 /* CertiSelectViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -355,6 +404,42 @@
 				B8613504274BB64300E25A09 /* NetworkResult.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		B8A0A72C275325F200A3EBBE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B8A0A72D2753263600A3EBBE /* MypageCollectionReusableView.swift */,
+				B8A0A72F2753267B00A3EBBE /* MypageCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B8A70D03275430650008E519 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				B8A70D052754307E0008E519 /* Storyboard */,
+				B8A70D04275430780008E519 /* ViewController */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		B8A70D04275430780008E519 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B8A70D082754353C0008E519 /* CameraNavigationViewController.swift */,
+				B8A70D0A2754395D0008E519 /* TimeStampViewController.swift */,
+				B8A70D0C27543D7A0008E519 /* TimeStampCheckViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B8A70D052754307E0008E519 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B8A70D062754308A0008E519 /* Camera.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		B8C14D3A2747EC24007C9DEF = {
@@ -459,6 +544,7 @@
 				B85D61D4274A4646008DFFB3 /* Certification.storyboard in Resources */,
 				B85D61D9274A468C008DFFB3 /* Mypage.storyboard in Resources */,
 				B85D61DE274A46A5008DFFB3 /* Setting.storyboard in Resources */,
+				B8A70D072754308A0008E519 /* Camera.storyboard in Resources */,
 				B85D61F7274A4CC0008DFFB3 /* NotoSansKR-Bold.otf in Resources */,
 				B85D61F3274A49BF008DFFB3 /* Signup.storyboard in Resources */,
 				B85D61CE274A423D008DFFB3 /* Login.storyboard in Resources */,
@@ -482,7 +568,6 @@
 				B8563956274CA86F000799B3 /* GenericResponse.swift in Sources */,
 				B8613509274BDD0A00E25A09 /* UITextField+Extension.swift in Sources */,
 				B8C6EC2C274F86D700391136 /* CertiCollectionViewCell.swift in Sources */,
-				B843F10F2751F4F8004EAC9A /* UIImageView.swift in Sources */,
 				B85D61D6274A464F008DFFB3 /* CertiViewController.swift in Sources */,
 				B861350B274BDD6500E25A09 /* UIView+Extension.swift in Sources */,
 				B8613501274BB5F100E25A09 /* APITarget.swift in Sources */,
@@ -491,24 +576,39 @@
 				B85D61F5274A49C7008DFFB3 /* SignupViewController.swift in Sources */,
 				B85D61DB274A4696008DFFB3 /* MypageViewController.swift in Sources */,
 				B808CA72274E4BD800E26484 /* SignupDoneViewController.swift in Sources */,
+				B8A70D0F27543DFB0008E519 /* Date+Extension.swift in Sources */,
 				B808CA70274E298B00E26484 /* SignupSecondViewController.swift in Sources */,
+				B8A70D0D27543D7A0008E519 /* TimeStampCheckViewController.swift in Sources */,
 				B843F111275207B5004EAC9A /* CertiDetailViewController.swift in Sources */,
+				B843F11A27529AEE004EAC9A /* UILabel+Class.swift in Sources */,
 				B85D61E0274A46AE008DFFB3 /* SettingViewController.swift in Sources */,
+				B843F11C2752ADC6004EAC9A /* SimpleResponse.swift in Sources */,
 				B8613505274BB64300E25A09 /* NetworkResult.swift in Sources */,
 				B85D61E5274A48FF008DFFB3 /* PostCertiViewController.swift in Sources */,
 				B861350D274BE45400E25A09 /* UIFont+Extension.swift in Sources */,
+				B843F11427527DD6004EAC9A /* CertiDetailData.swift in Sources */,
 				B8C14D4B2747EC24007C9DEF /* ViewController.swift in Sources */,
+				B8A70D002753B7870008E519 /* CertiTimeSelectViewController.swift in Sources */,
+				B8A0A732275393CC00A3EBBE /* CertiUploadViewController.swift in Sources */,
 				B8C14D472747EC24007C9DEF /* AppDelegate.swift in Sources */,
+				B8A70D022753B79F0008E519 /* CertiSelectViewController.swift in Sources */,
 				B8613503274BB61D00E25A09 /* APIService.swift in Sources */,
 				B808CA6C274E259F00E26484 /* SignupPageViewController.swift in Sources */,
 				B8C6EC2F274F9D0000391136 /* CertiCollectionReusableView.swift in Sources */,
 				B808CA6E274E297500E26484 /* SignupFirstViewController.swift in Sources */,
+				B8A70D1327543FE60008E519 /* UIImage+Extension.swift in Sources */,
 				B808CA74274E924D00E26484 /* SignupData.swift in Sources */,
+				B843F11827529743004EAC9A /* UIImageView+Extension.swift in Sources */,
+				B8A0A7302753267B00A3EBBE /* MypageCollectionViewCell.swift in Sources */,
 				B8563958274CAAAA000799B3 /* LoginData.swift in Sources */,
+				B8A70D092754353C0008E519 /* CameraNavigationViewController.swift in Sources */,
 				B8C338DA2750C6E700D5E59A /* UINavigationBar+Extension.swift in Sources */,
+				B8A70D0B2754395D0008E519 /* TimeStampViewController.swift in Sources */,
 				B85D61D0274A4252008DFFB3 /* LoginViewController.swift in Sources */,
 				B8C14D492747EC24007C9DEF /* SceneDelegate.swift in Sources */,
+				B8A0A72E2753263600A3EBBE /* MypageCollectionReusableView.swift in Sources */,
 				B8613507274BBD4000E25A09 /* UIButton+Extension.swift in Sources */,
+				B8A70D1127543F200008E519 /* String+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,7 +26,14 @@ extension UIView {
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
-//    func setCornerRadius(cornerRadius: CGFloat) {
-//        self.
-//    }
+    func snapShot() -> UIImage {
+        print("스냅샷")
+        
+        let renderer = UIGraphicsImageRenderer(size: self.bounds.size)
+        let image = renderer.image { context in
+            self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        }
+        
+        return image
+    }
 }

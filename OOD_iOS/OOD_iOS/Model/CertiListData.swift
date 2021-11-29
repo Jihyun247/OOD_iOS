@@ -15,7 +15,8 @@ struct CertiListData: Codable {
     let userNickname: String
     
     enum CodingKeys: String, CodingKey {
-        case id, imageUrl
+        case id
+        case imageUrl = "image"
         case createdAt = "created_at"
         case userId = "user_id"
         case userNickname = "user_nickname"

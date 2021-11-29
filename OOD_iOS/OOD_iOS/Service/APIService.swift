@@ -28,9 +28,9 @@ struct APIService {
                 guard let decodedData = try? JSONDecoder().decode(GenericResponse<LoginData>.self, from: response.data) else {
                     return completion(.pathErr)
                 }
-                print(decodedData)
+
                 guard let data = decodedData.data else {
-                    return completion(.requestErr(decodedData.message))
+                    return completion(.requestErr(decodedData.message ?? ""))
                 }
                 
                 completion(.success(data))
@@ -53,9 +53,9 @@ struct APIService {
                 guard let decodedData = try? JSONDecoder().decode(GenericResponse<SignupData>.self, from: response.data) else {
                     return completion(.pathErr)
                 }
-                print(decodedData)
+
                 guard let data = decodedData.data else {
-                    return completion(.requestErr(decodedData.message))
+                    return completion(.requestErr(decodedData.message ?? ""))
                 }
                 
                 completion(.success(data))
@@ -80,9 +80,9 @@ struct APIService {
                 guard let decodedData = try? JSONDecoder().decode(GenericResponse<[CertiListData]>.self, from: response.data) else {
                     return completion(.pathErr)
                 }
-                print(decodedData)
+
                 guard let data = decodedData.data else {
-                    return completion(.requestErr(decodedData.message))
+                    return completion(.requestErr(decodedData.message ?? ""))
                 }
                 
                 completion(.success(data))
@@ -92,6 +92,50 @@ struct APIService {
             }
         }
     }
+    
+    func certiListByCal(token: String, certiId: Int, completion: @escaping (NetworkResult<Any>)->()) {
+        
+        let target: APITarget = .certiDetail(token: token, certiId: certiId)
+        
+        provider.request(target) { result in
+            switch result {
+            case .success(let response):
+                
+                guard let decodedData = try? JSONDecoder().decode(GenericResponse<CertiDetailData>.self, from: response.data) else {
+                    return completion(.pathErr)
+                }
+    
+                guard let data = decodedData.data else {
+                    return completion(.requestErr(decodedData.message ?? ""))
+                }
+                
+                completion(.success(data))
+
+            case .failure(let err):
+                completion(.failure(err))
+            }
+        }
+    }
+    
+    func certiDelete(token: String, certiId: Int, completion: @escaping (NetworkResult<Any>)->()) {
+        
+        let target: APITarget = .certiDelete(token: token, certiId: certiId)
+        
+        provider.request(target) { result in
+            switch result {
+            case .success(let response):
+                
+                if let decodedData = try? JSONDecoder().decode(SimpleResponse.self, from: response.data) {
+                    completion(.success(decodedData))
+                }
+
+            case .failure(let err):
+                completion(.failure(err))
+            }
+        }
+    }
+    
+    
     
     
 }

@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        logoContainViewHeight.constant = 388*deviceHeight
+        logoContainViewHeight.constant = deviceHeight * 388
         
         setTextFieldUI()
         setButtonUI()
