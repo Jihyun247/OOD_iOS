@@ -9,8 +9,4 @@ import Foundation
 
 struct SignupData: Codable {
     let nickname: String
-    
-    enum CodingKeys: String, CodingKey {
-        case nickname
-    }
 }

@@ -57,6 +57,9 @@
 		B8A70D0F27543DFB0008E519 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A70D0E27543DFB0008E519 /* Date+Extension.swift */; };
 		B8A70D1127543F200008E519 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A70D1027543F200008E519 /* String+Extension.swift */; };
 		B8A70D1327543FE60008E519 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A70D1227543FE60008E519 /* UIImage+Extension.swift */; };
+		B8A70D182754FB8A0008E519 /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = B8A70D172754FB8A0008E519 /* DropDown */; };
+		B8A70D1A275512C50008E519 /* CertiUploadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A70D19275512C50008E519 /* CertiUploadData.swift */; };
+		B8A70D1C27551D9E0008E519 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A70D1B27551D9E0008E519 /* UILabel+Extension.swift */; };
 		B8C14D472747EC24007C9DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C14D462747EC24007C9DEF /* AppDelegate.swift */; };
 		B8C14D492747EC24007C9DEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C14D482747EC24007C9DEF /* SceneDelegate.swift */; };
 		B8C14D4B2747EC24007C9DEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C14D4A2747EC24007C9DEF /* ViewController.swift */; };
@@ -120,6 +123,8 @@
 		B8A70D0E27543DFB0008E519 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		B8A70D1027543F200008E519 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B8A70D1227543FE60008E519 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		B8A70D19275512C50008E519 /* CertiUploadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiUploadData.swift; sourceTree = "<group>"; };
+		B8A70D1B27551D9E0008E519 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		B8C14D432747EC24007C9DEF /* OOD_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OOD_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C14D462747EC24007C9DEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8C14D482747EC24007C9DEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B85D6200274A4D53008DFFB3 /* Kingfisher in Frameworks */,
+				B8A70D182754FB8A0008E519 /* DropDown in Frameworks */,
 				B8C6EC32274FBFD300391136 /* FSCalendar in Frameworks */,
 				B85D61CC274A36CE008DFFB3 /* Moya in Frameworks */,
 			);
@@ -167,6 +173,7 @@
 				B843F10C2751EE60004EAC9A /* CertiListData.swift */,
 				B843F11327527DD6004EAC9A /* CertiDetailData.swift */,
 				B843F11B2752ADC6004EAC9A /* SimpleResponse.swift */,
+				B8A70D19275512C50008E519 /* CertiUploadData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +205,7 @@
 				B8A70D0E27543DFB0008E519 /* Date+Extension.swift */,
 				B8A70D1027543F200008E519 /* String+Extension.swift */,
 				B8A70D1227543FE60008E519 /* UIImage+Extension.swift */,
+				B8A70D1B27551D9E0008E519 /* UILabel+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -492,6 +500,7 @@
 				B85D61CB274A36CE008DFFB3 /* Moya */,
 				B85D61FF274A4D53008DFFB3 /* Kingfisher */,
 				B8C6EC31274FBFD300391136 /* FSCalendar */,
+				B8A70D172754FB8A0008E519 /* DropDown */,
 			);
 			productName = OOD_iOS;
 			productReference = B8C14D432747EC24007C9DEF /* OOD_iOS.app */;
@@ -525,6 +534,7 @@
 				B85D61CA274A36CE008DFFB3 /* XCRemoteSwiftPackageReference "Moya" */,
 				B85D61FE274A4D53008DFFB3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B8C6EC30274FBFD300391136 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				B8A70D162754FB8A0008E519 /* XCRemoteSwiftPackageReference "DropDown" */,
 			);
 			productRefGroup = B8C14D442747EC24007C9DEF /* Products */;
 			projectDirPath = "";
@@ -569,6 +579,7 @@
 				B8613509274BDD0A00E25A09 /* UITextField+Extension.swift in Sources */,
 				B8C6EC2C274F86D700391136 /* CertiCollectionViewCell.swift in Sources */,
 				B85D61D6274A464F008DFFB3 /* CertiViewController.swift in Sources */,
+				B8A70D1A275512C50008E519 /* CertiUploadData.swift in Sources */,
 				B861350B274BDD6500E25A09 /* UIView+Extension.swift in Sources */,
 				B8613501274BB5F100E25A09 /* APITarget.swift in Sources */,
 				B8C14D512747EC24007C9DEF /* OOD_iOS.xcdatamodeld in Sources */,
@@ -590,6 +601,7 @@
 				B8C14D4B2747EC24007C9DEF /* ViewController.swift in Sources */,
 				B8A70D002753B7870008E519 /* CertiTimeSelectViewController.swift in Sources */,
 				B8A0A732275393CC00A3EBBE /* CertiUploadViewController.swift in Sources */,
+				B8A70D1C27551D9E0008E519 /* UILabel+Extension.swift in Sources */,
 				B8C14D472747EC24007C9DEF /* AppDelegate.swift in Sources */,
 				B8A70D022753B79F0008E519 /* CertiSelectViewController.swift in Sources */,
 				B8613503274BB61D00E25A09 /* APIService.swift in Sources */,
@@ -756,16 +768,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = B849TJY5N4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OOD_iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "오운동";
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진 촬영을 위한 카메라 사용 권한";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "타임스탬프 촬영을 위한 카메라 사용 권한";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Certification;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -775,7 +792,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -785,16 +802,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = B849TJY5N4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OOD_iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "오운동";
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진 촬영을 위한 카메라 사용 권한";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "타임스탬프 촬영을 위한 카메라 사용 권한";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Certification;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -804,7 +826,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -848,6 +870,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		B8A70D162754FB8A0008E519 /* XCRemoteSwiftPackageReference "DropDown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AssistoLab/DropDown.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		B8C6EC30274FBFD300391136 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
@@ -868,6 +898,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B85D61FE274A4D53008DFFB3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		B8A70D172754FB8A0008E519 /* DropDown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8A70D162754FB8A0008E519 /* XCRemoteSwiftPackageReference "DropDown" */;
+			productName = DropDown;
 		};
 		B8C6EC31274FBFD300391136 /* FSCalendar */ = {
 			isa = XCSwiftPackageProductDependency;

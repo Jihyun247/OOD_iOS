@@ -9,18 +9,25 @@ import UIKit
 
 class CertiDetailViewController: UIViewController {
     
+    let grey = UIColor(red: 221/255, green: 225/255, blue: 229/255, alpha: 1)
+    
     let deviceHeight = UIScreen.main.bounds.height / 896
     var token: String?
     var certiId: Int?
     var certiDetailData: CertiDetailData? {
         didSet {
             if let detailData = self.certiDetailData, let certi = detailData.certi {
-                setNavigationBar(date: certi.parseDate)
                 setLabel(certi: certi)
                 setImageView(imageUrl: certi.certiImage ?? "")
             }
         }
     }
+    
+    @IBOutlet weak var backButton: UIButton!
+    // 추후 드롭다운으로 수정 예정
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var naviTitleLabel: UILabel!
+    
     
     @IBOutlet weak var certiImageView: UIImageView!
     @IBOutlet weak var imageContainViewHeight: NSLayoutConstraint!
@@ -39,14 +46,11 @@ class CertiDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(UIScreen.main.bounds.height)
         token = UserDefaults.standard.string(forKey: "token")
         certiDetail(token: token!, id: certiId!)
         
         setTextView()
-        
-//        let token = UserDefaults.standard.string(forKey: "token") ?? "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM3NzM0NzY3LCJleHAiOjE2NjM2NTQ3NjcsImlzcyI6Im9vZCJ9.YDDrwpfOUMWggJnfNJFcPs7TVeLp7rw_hLorlr5FzVs"
-//        certiDetail(token: token, id: certiId!)
     }
     
     func certiDetail(token: String, id: Int) {
@@ -67,6 +71,8 @@ class CertiDetailViewController: UIViewController {
     
     func setLabel(certi: Certi) {
         
+        // need to fix 레이블 컬렉션으로 다 바꾸기
+        naviTitleLabel.font = UIFont.notoSansMedium(size: 18)
         exTimeGuideLabel.font = UIFont.notoSansMedium(size: 18)
         certiSportGuideLabel.font = UIFont.notoSansMedium(size: 18)
         exIntensityGuideLabel.font = UIFont.notoSansMedium(size: 18)
@@ -74,6 +80,9 @@ class CertiDetailViewController: UIViewController {
         exCommentGuideLabel.font = UIFont.notoSansMedium(size: 18)
         
         let OOD_purple = UIColor(named: "OOD_purple")
+        
+        naviTitleLabel.text = certi.parseDate
+        naviTitleLabel.font = UIFont.notoSansMedium(size: 18)
         
         exTimeLabel.text = certi.exTime
         exTimeLabel.setBorderColorAndRadius(borderColor: OOD_purple, borderWidth: 1, cornerRadius: 2)
@@ -97,9 +106,10 @@ class CertiDetailViewController: UIViewController {
     
     func setTextView() {
         
-        exCommentTextView.layer.borderColor = UIColor.lightGray.cgColor
-        exCommentTextView.layer.borderWidth = 0.5
+        exCommentTextView.setBorderColorAndRadius(borderColor: grey, borderWidth: 1, cornerRadius: 0)
         exCommentTextView.textContainerInset = UIEdgeInsets(top: 14, left: 14, bottom: 14, right: 14)
+        exCommentTextView.font = UIFont.notoSansMedium(size: 16)
+        exCommentTextView.isEditable = false
     }
     
     func setImageView(imageUrl: String) {
@@ -111,21 +121,11 @@ class CertiDetailViewController: UIViewController {
         certiImageView.setBorderColorAndRadius(borderColor: .clear, borderWidth: 0, cornerRadius: 8)
     }
     
-    func setNavigationBar(date: String) {
-        title = date
-        
-        navigationItem.backButtonTitle = ""
-        navigationItem.hidesBackButton = true
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "backbtn"), style: .plain, target: self, action: #selector(popButtonClicked))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .plain, target: self, action: #selector(deleteButtonClicked))
-        navigationItem.rightBarButtonItem?.tintColor = .black
-    }
-    
-    @objc func popButtonClicked() {
+    @IBAction func backBtnClicked(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
     
-    @objc func deleteButtonClicked() {
+    @IBAction func deleteBtnClicked(_ sender: UIButton) {
         
         if let t = self.token, let c = self.certiId {
             APIService.shared.certiDelete(token: t, certiId: c) { result in
@@ -143,6 +143,4 @@ class CertiDetailViewController: UIViewController {
             }
         }
     }
-    
-    
 }

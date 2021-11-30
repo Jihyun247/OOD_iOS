@@ -28,11 +28,20 @@ class CertiViewController: UIViewController{
     
     var certiListData: [CertiListData] = [] {
         didSet {
+            print("언제 호출되느냐")
             certiCollectionView.reloadData()
             
             DispatchQueue.main.async {
                 self.collectionViewHeight.constant = self.certiCollectionView.contentSize.height
                 self.certiCollectionView.isHidden = false
+            }
+            
+            if certiListData.count == 0 {
+                noCertiLabel.isHidden = true
+                noCertiImageView.isHidden = true
+            } else {
+                noCertiLabel.isHidden = false
+                noCertiImageView.isHidden = false
             }
         }
     }
@@ -50,6 +59,8 @@ class CertiViewController: UIViewController{
     @IBOutlet weak var viewGuideLabel: UILabel!
     @IBOutlet weak var calendarHeaderLabel: UILabel!
     @IBOutlet weak var noCertiLabel: UILabel!
+    @IBOutlet weak var noCertiImageView: UIImageView!
+    
     
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var mypageButton: UIButton!
@@ -61,18 +72,26 @@ class CertiViewController: UIViewController{
         
         super.viewDidLoad()
         
+        print(UIScreen.main.bounds.height)
         setDateFormat()
         setCalendarView()
         setCollectionView()
-        setNavigationUI()
         setLabelUI()
         setButtonUI()
+        
+        let todayDate = self.queryDF.string(from: today)
+        if let token = UserDefaults.standard.string(forKey: "token") {
+            certiListByCal(token: token, date: selectedDate ?? todayDate)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        let todayDate = self.queryDF.string(from: today)
+        if let token = UserDefaults.standard.string(forKey: "token") {
+            certiListByCal(token: token, date: selectedDate ?? todayDate)
+        }
     }
     
     //MARK: - func
@@ -88,11 +107,6 @@ class CertiViewController: UIViewController{
         
         let nibName = UINib(nibName: CertiCollectionViewCell.identifier, bundle: nil)
         certiCollectionView.register(nibName, forCellWithReuseIdentifier: CertiCollectionViewCell.identifier)
-        
-        let todayDate = self.queryDF.string(from: today)
-        if let token = UserDefaults.standard.string(forKey: "token") {
-            certiListByCal(token: token, date: selectedDate ?? todayDate)
-        }
     }
     
     func setCalendarView() {
@@ -126,12 +140,6 @@ class CertiViewController: UIViewController{
         
         queryDF.locale = Locale(identifier: "ko")
         queryDF.dateFormat = "YYYY-MM-dd"
-    }
-    
-    func setNavigationUI() {
-        
-        //self.navigationController?.navigationBar.isHidden = true
-        //self.view.backgroundColor = UIColor(named: "OOD_blue")
     }
     
     func setLabelUI() {
@@ -192,7 +200,10 @@ class CertiViewController: UIViewController{
         navigationController?.pushViewController(certiUploadVC, animated: true)
     }
     
-    @IBAction func mypageButtonClicked(_ sender: UIBarButtonItem) {
+    @IBAction func mypageButtonClicked(_ sender: UIButton) {
+        guard let mypageVC = self.storyboard?.instantiateViewController(withIdentifier: "MypageViewController") as? MypageViewController else {return}
+        
+        navigationController?.pushViewController(mypageVC, animated: true)
     }
 
 }

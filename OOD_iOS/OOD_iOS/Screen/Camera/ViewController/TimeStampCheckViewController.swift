@@ -13,10 +13,6 @@ class TimeStampCheckViewController: UIViewController {
     var snapTime: String?
     var snapDate: String?
     
-    var snapUploadDelegate: SnapUploadDelegate?
-
-
-    
     @IBOutlet weak var captureView: UIView!
     @IBOutlet weak var snapImageView: UIImageView!
     @IBOutlet weak var timestampBorderView: UIView!
@@ -32,13 +28,6 @@ class TimeStampCheckViewController: UIViewController {
         setCameraView()
 
         // Do any additional setup after loading the view.
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(segue.destination)
-        let vc = segue.destination as? CertiTimeSelectViewController
-        vc?.uploadedImage = self.captureView.snapShot()
-        
     }
     
     func setCameraView() {
@@ -70,6 +59,7 @@ class TimeStampCheckViewController: UIViewController {
     
     @IBAction func useBtnClicked(_ sender: UIButton) {
         
+        NotificationCenter.default.post(name: NSNotification.Name("snapImageUploaded"), object: nil, userInfo: ["snapImage": self.captureView.snapShot()])
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     

@@ -18,4 +18,23 @@ extension UIButton {
         gradientLayer.frame = self.bounds
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
+    
+    // 긴 바 버튼 활성화/비활성화
+    func activated() {
+        self.isEnabled = true
+        
+        self.applyGradient(colors: [UIColor(named: "OOD_purple")?.cgColor, UIColor(named: "OOD_blue")?.cgColor])
+    }
+    
+    func deactivated() {
+        self.isEnabled = false
+        
+        let subLayer = self.layer.sublayers!
+        for idx in subLayer.indices {
+            if (subLayer[idx] != subLayer.last) {
+                self.layer.sublayers![idx].removeFromSuperlayer()
+            }
+        }
+        self.backgroundColor = .lightGray
+    }
 }

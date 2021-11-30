@@ -16,6 +16,7 @@ struct APIService {
     let provider = MoyaProvider<APITarget>()
     
     //MARK: - AUTH API
+    // 아 중복코드 넘 많아!!!!
     
     func login(_ email: String, _ password: String, completion: @escaping (NetworkResult<Any>)->()) {
         
@@ -134,6 +135,44 @@ struct APIService {
             }
         }
     }
+    
+    func certiImageUpload(token: String, image: UIImage, certiId: Int, completion: @escaping (NetworkResult<Any>)->()) {
+        
+        let target: APITarget = .certiImageUpload(token: token, image: image, certiId: certiId)
+        
+        provider.request(target) { result in
+            switch result {
+            case .success(let response):
+                
+                if let decodedData = try? JSONDecoder().decode(SimpleResponse.self, from: response.data) {
+                    completion(.success(decodedData))
+                }
+
+            case .failure(let err):
+                completion(.failure(err))
+            }
+        }
+    }
+    
+    func certiContentUpload(token: String, exTime: String, exIntensity: String, exEvalu: String, exComment: String, certiSport: String, completion: @escaping (NetworkResult<Any>)->()) {
+        
+        let target: APITarget = .certiContentUpload(token: token, exTime: exTime, exIntensity: exIntensity, exEvalu: exEvalu, exComment: exComment, certiSport: certiSport)
+        
+        provider.request(target) { result in
+            switch result {
+            case .success(let response):
+                
+                if let decodedData = try? JSONDecoder().decode(SimpleResponse.self, from: response.data) {
+                    completion(.success(decodedData))
+                }
+
+            case .failure(let err):
+                completion(.failure(err))
+            }
+        }
+    }
+    
+    
     
     
     
