@@ -32,6 +32,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let token = UserDefaults.standard.string(forKey: "token") {
+            print("저장되어있는데?", token)
+        }
+        
         logoContainViewHeight.constant = deviceHeight * 388
         
         setTextFieldUI()
@@ -40,6 +44,11 @@ class LoginViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(true, animated: false)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guideLabel.isHidden = true
     }
     
     // MARK: - func
@@ -87,10 +96,6 @@ class LoginViewController: UIViewController {
                 
                 if let data = self.loginData {
                     UserDefaults.standard.setValue(data.token, forKey: "token")
-                    
-                    guard let certiVC = UIStoryboard(name: "Certification", bundle: nil).instantiateViewController(withIdentifier: "CertiViewController") as? CertiViewController else {return}
-                    certiVC.modalPresentationStyle = .fullScreen
-                    self.present(certiVC, animated: true, completion: nil)
                 }
             case .requestErr(let message):
                 if let msg = message as? String {
@@ -127,6 +132,12 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
         if let email = emailTextField.text, let password = passwordTextField.text {
             login(email: email, password: password)
+        }
+        
+        if loginData != nil {
+            guard let mainNVC = UIStoryboard(name: "Certification", bundle: nil).instantiateViewController(withIdentifier: "MainNavigationViewController") as? MainNavigationViewController else {return}
+            mainNVC.modalPresentationStyle = .fullScreen
+            self.present(mainNVC, animated: true, completion: nil)
         }
     }
 }

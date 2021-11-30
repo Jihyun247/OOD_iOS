@@ -21,6 +21,7 @@ class CertiCollectionReusableView: UICollectionReusableView {
 
 extension CertiCollectionReusableView: SelectedDateDelegate {
     func setLabel(date: String) {
+        print("얘가문제인가")
         selectedDateLabel.text = date
     }
     

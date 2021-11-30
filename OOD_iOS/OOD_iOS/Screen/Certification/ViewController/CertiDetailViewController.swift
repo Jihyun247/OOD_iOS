@@ -111,7 +111,6 @@ class CertiDetailViewController: UIViewController {
         exCommentTextView.font = UIFont.notoSansMedium(size: 16)
         exCommentTextView.isEditable = false
     }
-    
     func setImageView(imageUrl: String) {
         
         imageContainViewHeight.constant = deviceHeight * 400
@@ -121,17 +120,13 @@ class CertiDetailViewController: UIViewController {
         certiImageView.setBorderColorAndRadius(borderColor: .clear, borderWidth: 0, cornerRadius: 8)
     }
     
-    @IBAction func backBtnClicked(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func deleteBtnClicked(_ sender: UIButton) {
-        
+    func deleteCerti() {
         if let t = self.token, let c = self.certiId {
             APIService.shared.certiDelete(token: t, certiId: c) { result in
                 switch result {
                 case .success(_):
                     print("delete success")
+                    self.navigationController?.popViewController(animated: true)
                 case .requestErr(let message):
                     print("requestErr")
                     print(message)
@@ -142,5 +137,22 @@ class CertiDetailViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @IBAction func backBtnClicked(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func deleteBtnClicked(_ sender: UIButton) {
+        
+        let alert = UIAlertController(title: "잠깐!", message: "해당 게시물을 삭제하시겠습니까?", preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title: "확인", style: .default) { action in
+            self.deleteCerti()
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        alert.addAction(deleteAction)
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }

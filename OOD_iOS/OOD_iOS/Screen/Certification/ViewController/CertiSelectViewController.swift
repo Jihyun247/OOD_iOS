@@ -28,6 +28,7 @@ class CertiSelectViewController: UIViewController {
         }
     }
     var keyboardHeight: CGFloat?
+    var isuploaded: Bool = false
     
     let deviceHeight = UIScreen.main.bounds.height/896
     let grey = UIColor(red: 221/255, green: 225/255, blue: 229/255, alpha: 1)
@@ -79,6 +80,7 @@ class CertiSelectViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        isuploaded = false
         self.addKeyboardNotifications()
     }
     
@@ -95,7 +97,6 @@ class CertiSelectViewController: UIViewController {
     func setLabel() {
         naviTitleLabel.font = UIFont.notoSansMedium(size: 18)
         naviTitleLabel.textColor = .black
-        
         guideLabels.map {
             $0.font = UIFont.notoSansMedium(size: 18)
         }
@@ -115,6 +116,8 @@ class CertiSelectViewController: UIViewController {
             btns[idx].tintColor = .lightGray
             btns[idx].backgroundColor = .white
             btns[idx].titleLabel?.font = UIFont.notoSansMedium(size: CGFloat(size))
+            // 버튼 하얗게 덮이는거 selected 되었을 때 백그라운드컬러 이슈인줄알앗는데 아님
+            //btns[idx].setBackgroundColor(.clear, for: .selected)
             
         }
     }
@@ -187,7 +190,10 @@ class CertiSelectViewController: UIViewController {
         guard let userToken = token, let exTime = exerciseTime, let exIntensity = intensityBtns[intensityBtnIdx!].titleLabel?.text, let exEvalu = evaluBtns[evaluBtnIdx!].titleLabel?.text, let certiSport = sportsBtns[sportsBtnIdx!].titleLabel?.text else { return }
         
         // content upload 후 response 데이터의 certiId get, certiId 프로퍼티 옵저버 didset으로 이미지 업로드까지 실행
-        uploadContent(userToken, exTime, exIntensity, exEvalu, exComment, certiSport)
+        if isuploaded == false {
+            uploadContent(userToken, exTime, exIntensity, exEvalu, exComment, certiSport)
+            isuploaded = true
+        }
     }
     
 }

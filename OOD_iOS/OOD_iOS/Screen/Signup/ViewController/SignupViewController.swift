@@ -26,9 +26,9 @@ class SignupViewController: UIViewController {
         setbackBtnUI()
         
         progressbar.progress = 0.5
-        UIView.animate(withDuration: 1.0, animations: {
-            self.progressbar.layoutIfNeeded()
-        }, completion: nil)
+//        UIView.animate(withDuration: 1.0, animations: {
+//            self.progressbar.layoutIfNeeded()
+//        }, completion: nil)
         
     }
     

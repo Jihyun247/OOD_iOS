@@ -10,6 +10,8 @@ import UIKit
 class SignupDoneViewController: UIViewController {
     
     var nickname: String?
+    
+    @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var signupDoneLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
     
@@ -23,7 +25,11 @@ class SignupDoneViewController: UIViewController {
     func setLabelUI() {
         signupDoneLabel.font = UIFont.notoSansMedium(size: 26.0)
         signupDoneLabel.textColor = .black
-        signupDoneLabel.text = "\(nickname!)님 가입 완료!"
+        signupDoneLabel.text = "가입 완료!"
+        
+        signupDoneLabel.font = UIFont.notoSansMedium(size: 24.0)
+        signupDoneLabel.textColor = .black
+        signupDoneLabel.text = "\(nickname!)님"
     }
     
     func setButtonUI() {

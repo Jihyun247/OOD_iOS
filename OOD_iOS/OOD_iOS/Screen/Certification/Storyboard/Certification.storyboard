@@ -74,13 +74,13 @@
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noCerti" translatesAutoresizingMaskIntoConstraints="NO" id="wVA-a5-KF5">
-                                                <rect key="frame" x="159.5" y="536.5" width="95" height="142.5"/>
+                                                <rect key="frame" x="160.5" y="526.5" width="93" height="139"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="wVA-a5-KF5" secondAttribute="height" multiplier="93:139" id="3gk-nV-hjj"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록이 없어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVX-Ce-Cb1">
-                                                <rect key="frame" x="132" y="490" width="150" height="21.5"/>
+                                                <rect key="frame" x="132" y="480" width="150" height="21.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="AzE-Wq-nGx"/>
                                                 </constraints>
@@ -101,7 +101,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AxS-jS-ebg">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="nouseCell" id="AxS-jS-ebg">
                                                         <rect key="frame" x="0.0" y="81" width="128" height="128"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CIu-gx-M6K">
@@ -190,9 +190,8 @@
                                             <constraint firstItem="VAL-P9-4Op" firstAttribute="leading" secondItem="562-7h-30n" secondAttribute="leading" id="TTg-Gl-ahq"/>
                                             <constraint firstItem="VAL-P9-4Op" firstAttribute="top" secondItem="pj2-u8-Jwj" secondAttribute="bottom" id="YB5-8N-SDt"/>
                                             <constraint firstItem="wVA-a5-KF5" firstAttribute="centerX" secondItem="562-7h-30n" secondAttribute="centerX" id="b8c-uT-jJj"/>
-                                            <constraint firstItem="wVA-a5-KF5" firstAttribute="width" secondItem="562-7h-30n" secondAttribute="width" multiplier="0.23" id="bOe-fr-SBd"/>
                                             <constraint firstAttribute="trailing" secondItem="VAL-P9-4Op" secondAttribute="trailing" id="dzq-pE-rhK"/>
-                                            <constraint firstItem="RVX-Ce-Cb1" firstAttribute="top" secondItem="0zN-CO-33a" secondAttribute="bottom" constant="150" id="e8x-DH-JD1"/>
+                                            <constraint firstItem="RVX-Ce-Cb1" firstAttribute="top" secondItem="0zN-CO-33a" secondAttribute="bottom" constant="140" id="e8x-DH-JD1"/>
                                             <constraint firstAttribute="trailing" secondItem="0zN-CO-33a" secondAttribute="trailing" id="hIj-4G-Ogb"/>
                                             <constraint firstItem="RVX-Ce-Cb1" firstAttribute="centerX" secondItem="562-7h-30n" secondAttribute="centerX" id="nkx-u9-vnp"/>
                                             <constraint firstItem="pj2-u8-Jwj" firstAttribute="leading" secondItem="562-7h-30n" secondAttribute="leading" id="peT-x5-NF0"/>
@@ -246,6 +245,7 @@
                             <constraint firstItem="2Mo-Qq-ya7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="RIe-Bg-u7J"/>
                             <constraint firstItem="2Mo-Qq-ya7" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="USA-Q6-e8h"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wni-b5-fY8" secondAttribute="trailing" id="uqd-Wy-Y1C"/>
+                            <constraint firstItem="wVA-a5-KF5" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.155134" id="xWa-uu-FM1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zyN-J5-Cvy"/>
@@ -257,6 +257,7 @@
                         <outlet property="certiCollectionView" destination="AeL-aM-aQa" id="xaf-Rh-vt4"/>
                         <outlet property="collectionViewHeight" destination="Tak-s0-3lj" id="AEe-UH-ixb"/>
                         <outlet property="mypageButton" destination="qzD-sj-ZJO" id="qDJ-UT-D3L"/>
+                        <outlet property="noCertiGuideHeight" destination="e8x-DH-JD1" id="jCF-KS-nOR"/>
                         <outlet property="noCertiImageView" destination="wVA-a5-KF5" id="RW4-yg-lTb"/>
                         <outlet property="noCertiLabel" destination="RVX-Ce-Cb1" id="Giw-lk-osC"/>
                         <outlet property="viewGuideLabel" destination="Onh-Lq-RG0" id="Lld-ol-DM8"/>
@@ -265,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="855" y="374"/>
+            <point key="canvasLocation" x="1763.7681159420292" y="373.66071428571428"/>
         </scene>
         <!--Certi Upload View Controller-->
         <scene sceneID="WX6-j7-CZp">
@@ -621,7 +622,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YsG-An-XrQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="-20"/>
+            <point key="canvasLocation" x="2518.840579710145" y="-20.089285714285712"/>
         </scene>
         <!--Certi Time Select View Controller-->
         <scene sceneID="WvR-be-RzZ">
@@ -810,7 +811,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7d-kk-vXl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2317" y="-20"/>
+            <point key="canvasLocation" x="3226.0869565217395" y="-20.089285714285712"/>
         </scene>
         <!--Certi Select View Controller-->
         <scene sceneID="670-1Z-qaG">
@@ -842,7 +843,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="F1g-2c-5Iu">
                                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="150"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiJ-IL-BRV">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiJ-IL-BRV">
                                                                         <rect key="frame" x="0.0" y="0.0" width="165" height="50"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="요가"/>
@@ -850,7 +851,7 @@
                                                                             <action selector="radioBtnClicked:" destination="gwL-WW-SlV" eventType="touchUpInside" id="GJT-39-nYU"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9m-dH-jZR">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9m-dH-jZR">
                                                                         <rect key="frame" x="0.0" y="50" width="165" height="50"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="러닝"/>
@@ -858,7 +859,7 @@
                                                                             <action selector="radioBtnClicked:" destination="gwL-WW-SlV" eventType="touchUpInside" id="1wC-H2-UYg"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa8-3F-LCv">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa8-3F-LCv">
                                                                         <rect key="frame" x="0.0" y="100" width="165" height="50"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="헬스"/>
@@ -883,7 +884,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="B39-LG-a27">
                                                                 <rect key="frame" x="165" y="0.0" width="165" height="150"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUg-1M-MfG">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUg-1M-MfG">
                                                                         <rect key="frame" x="0.0" y="0.0" width="165" height="50"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="필라테스"/>
@@ -891,7 +892,7 @@
                                                                             <action selector="radioBtnClicked:" destination="gwL-WW-SlV" eventType="touchUpInside" id="F3Y-LB-mRA"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEZ-r8-opm">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEZ-r8-opm">
                                                                         <rect key="frame" x="0.0" y="50" width="165" height="50"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="자전거"/>
@@ -899,7 +900,7 @@
                                                                             <action selector="radioBtnClicked:" destination="gwL-WW-SlV" eventType="touchUpInside" id="o6T-QR-9WG"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFD-Fx-aDP">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFD-Fx-aDP">
                                                                         <rect key="frame" x="0.0" y="100" width="165" height="50"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="크로스핏"/>
@@ -977,7 +978,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hRr-ZY-r1d">
                                                         <rect key="frame" x="42" y="153.5" width="330" height="50"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4e-go-DGS">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4e-go-DGS">
                                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="50"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="강"/>
@@ -985,7 +986,7 @@
                                                                     <action selector="radioBtnClicked:" destination="gwL-WW-SlV" eventType="touchUpInside" id="amI-ay-wi5"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAw-X0-TMc">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAw-X0-TMc">
                                                                 <rect key="frame" x="110" y="0.0" width="110" height="50"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="중"/>
@@ -993,7 +994,7 @@
                                                                     <action selector="radioBtnClicked:" destination="gwL-WW-SlV" eventType="touchUpInside" id="IiJ-E6-MGc"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6k1-rB-A4B">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6k1-rB-A4B">
                                                                 <rect key="frame" x="220" y="0.0" width="110" height="50"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="약"/>
@@ -1043,7 +1044,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CwG-iI-T3D">
                                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="150"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6b-K1-WSa">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6b-K1-WSa">
                                                                         <rect key="frame" x="0.0" y="0.0" width="165" height="50"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="2% 부족했어요"/>
@@ -1051,7 +1052,7 @@
                                                                             <action selector="radioBtnClicked:" destination="gwL-WW-SlV" eventType="touchUpInside" id="FSf-od-fKO"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bD-l9-hFm">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bD-l9-hFm">
                                                                         <rect key="frame" x="0.0" y="50" width="165" height="50"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="시원하게 땀 흘렸어요"/>
@@ -1059,7 +1060,7 @@
                                                                             <action selector="radioBtnClicked:" destination="gwL-WW-SlV" eventType="touchUpInside" id="TwT-IZ-OJY"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKf-hn-DLD">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKf-hn-DLD">
                                                                         <rect key="frame" x="0.0" y="100" width="165" height="50"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="오늘도 해낸 나에게 칭찬!"/>
@@ -1084,7 +1085,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Vic-Vd-UJ9">
                                                                 <rect key="frame" x="165" y="0.0" width="165" height="150"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtw-0C-j0j">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtw-0C-j0j">
                                                                         <rect key="frame" x="0.0" y="0.0" width="165" height="50"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="근육을 마구 자극했어요"/>
@@ -1092,7 +1093,7 @@
                                                                             <action selector="radioBtnClicked:" destination="gwL-WW-SlV" eventType="touchUpInside" id="az5-aQ-kon"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oj-Vx-IaK">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oj-Vx-IaK">
                                                                         <rect key="frame" x="0.0" y="50" width="165" height="50"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="쉬엄쉬엄 했어요"/>
@@ -1100,7 +1101,7 @@
                                                                             <action selector="radioBtnClicked:" destination="gwL-WW-SlV" eventType="touchUpInside" id="BcK-3n-y7P"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PN-88-V29">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PN-88-V29">
                                                                         <rect key="frame" x="0.0" y="100" width="165" height="50"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="내일 열심히 할래요"/>
@@ -1313,7 +1314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xP-io-2le" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3019" y="-20"/>
+            <point key="canvasLocation" x="3928.985507246377" y="-20.089285714285712"/>
         </scene>
         <!--Certi Detail View Controller-->
         <scene sceneID="gWT-WS-itZ">
@@ -1549,8 +1550,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xBq-2H-ICW" secondAttribute="height" id="qVT-Sa-HjV"/>
                                         </constraints>
+                                        <color key="tintColor" name="OOD_purple"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="addCertiBtn"/>
+                                        <state key="normal" image="trash" catalog="system"/>
                                         <connections>
                                             <action selector="deleteBtnClicked:" destination="5Gr-P9-xHp" eventType="touchUpInside" id="ifZ-uC-rkN"/>
                                         </connections>
@@ -1601,24 +1603,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfO-qz-5X2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1608.6956521739132" y="711.16071428571422"/>
+            <point key="canvasLocation" x="2518.840579710145" y="711.16071428571422"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="hUz-6n-uKV">
+        <!--Main Navigation View Controller-->
+        <scene sceneID="cOC-Xz-OYe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="TqJ-CF-q3O" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vde-QF-eaB" customClass="MainNavigationViewController" customModule="OOD_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vyE-Qp-pzC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UeO-g1-9Zh">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="XhB-2B-TUX"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="q52-Mn-YhM"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1xe-DW-mtv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxv-UM-YQm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="97.767857142857139"/>
+            <point key="canvasLocation" x="853.62318840579712" y="373.66071428571428"/>
         </scene>
     </scenes>
     <resources>
@@ -1635,6 +1637,7 @@
         <image name="prevBtn" width="10.5" height="16"/>
         <image name="selectIcon" width="72" height="72"/>
         <image name="speechBalloon" width="251" height="72"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="OOD_blue">
             <color red="0.46299999952316284" green="0.57999998331069946" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

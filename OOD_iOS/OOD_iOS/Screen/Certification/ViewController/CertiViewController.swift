@@ -19,7 +19,8 @@ class CertiViewController: UIViewController{
     let calendarHeaderDF = DateFormatter()
     let queryDF = DateFormatter()
     
-    var selectedDate: String?
+    var selectedDate: Date = Date()
+    var selectedDateString: String?
     var selectedDateDelegate: SelectedDateDelegate?
     var currentPage: Date?
     lazy var today: Date = {
@@ -28,20 +29,23 @@ class CertiViewController: UIViewController{
     
     var certiListData: [CertiListData] = [] {
         didSet {
-            print("언제 호출되느냐")
+            print("didset",certiListData)
             certiCollectionView.reloadData()
+            
+            let selectedHeaderString = self.collectionHeaderDF.string(from: selectedDate)
+            self.selectedDateDelegate?.setLabel(date: selectedHeaderString)
             
             DispatchQueue.main.async {
                 self.collectionViewHeight.constant = self.certiCollectionView.contentSize.height
-                self.certiCollectionView.isHidden = false
             }
             
             if certiListData.count == 0 {
-                noCertiLabel.isHidden = true
-                noCertiImageView.isHidden = true
-            } else {
                 noCertiLabel.isHidden = false
                 noCertiImageView.isHidden = false
+            } else {
+                self.certiCollectionView.isHidden = false
+                noCertiLabel.isHidden = true
+                noCertiImageView.isHidden = true
             }
         }
     }
@@ -51,7 +55,7 @@ class CertiViewController: UIViewController{
     @IBOutlet weak var certiCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var calendarViewHeight: NSLayoutConstraint!
-    // 캘린더뷰 Height도 디바이스에 따라 조절해주기
+    @IBOutlet weak var noCertiGuideHeight: NSLayoutConstraint!
     
     @IBOutlet weak var calendarView: FSCalendar!
     
@@ -72,25 +76,19 @@ class CertiViewController: UIViewController{
         
         super.viewDidLoad()
         
-        print(UIScreen.main.bounds.height)
         setDateFormat()
-        setCalendarView()
         setCollectionView()
+        setCalendarView()
         setLabelUI()
         setButtonUI()
-        
-        let todayDate = self.queryDF.string(from: today)
-        if let token = UserDefaults.standard.string(forKey: "token") {
-            certiListByCal(token: token, date: selectedDate ?? todayDate)
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        let todayDate = self.queryDF.string(from: today)
+    
         if let token = UserDefaults.standard.string(forKey: "token") {
-            certiListByCal(token: token, date: selectedDate ?? todayDate)
+            let todayDateString = self.queryDF.string(from: today)
+            certiListByCal(token: token, date: selectedDateString ?? todayDateString)
         }
     }
     
@@ -143,14 +141,16 @@ class CertiViewController: UIViewController{
     }
     
     func setLabelUI() {
-        viewTitleLabel.font = UIFont.notoSansBold(size: 24)
+        viewTitleLabel.font = UIFont.notoSansBold(size: 22)
         viewTitleLabel.textColor = .white
         viewGuideLabel.font = UIFont.notoSansMedium(size: 14)
         viewTitleLabel.textColor = .white
-        calendarHeaderLabel.font = UIFont.notoSansMedium(size: 22)
+        calendarHeaderLabel.font = UIFont.notoSansMedium(size: 20)
         calendarHeaderLabel.textColor = .black
-        noCertiLabel.font = UIFont.notoSansMedium(size: 18)
+        noCertiLabel.font = UIFont.notoSansMedium(size: 16)
         noCertiLabel.textColor = .black
+        
+        noCertiGuideHeight.constant = deviceHeight * 140
     }
     
     func setButtonUI() {
@@ -196,13 +196,12 @@ class CertiViewController: UIViewController{
     @IBAction func addCertiButtonClicked(_ sender: UIButton) {
         
         guard let certiUploadVC = self.storyboard?.instantiateViewController(withIdentifier: "CertiTimeSelectViewController") as? CertiTimeSelectViewController else {return}
-        
         navigationController?.pushViewController(certiUploadVC, animated: true)
     }
     
     @IBAction func mypageButtonClicked(_ sender: UIButton) {
-        guard let mypageVC = self.storyboard?.instantiateViewController(withIdentifier: "MypageViewController") as? MypageViewController else {return}
-        
+        let sb = UIStoryboard.init(name: "Mypage", bundle: nil)
+        guard let mypageVC = sb.instantiateViewController(withIdentifier: "MypageViewController") as? MypageViewController else {return}
         navigationController?.pushViewController(mypageVC, animated: true)
     }
 
@@ -218,9 +217,9 @@ extension CertiViewController: UICollectionViewDelegate, UICollectionViewDataSou
         guard let headerView = certiCollectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CertiCollectionReusableView.identifier, for: indexPath) as? CertiCollectionReusableView else {
             return UICollectionReusableView()
         }
-        
+        print("델리게이트 reloaddata")
         self.selectedDateDelegate = headerView
-        headerView.selectedDateLabel.font = UIFont.notoSansMedium(size: 20.0)
+        headerView.selectedDateLabel.font = UIFont.notoSansMedium(size: 18.0)
         headerView.selectedDateLabel.textColor = .black
         
         return headerView
@@ -247,10 +246,9 @@ extension CertiViewController: UICollectionViewDelegate, UICollectionViewDataSou
     // 셀 클릭 시
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        guard let certiDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "CertiDetailViewController") as? CertiDetailViewController else {return}
+        guard let certiDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "CertiDetailViewController") as? CertiDetailViewController else { return}
         
         certiDetailVC.certiId = certiListData[indexPath.row].id
-        
         navigationController?.pushViewController(certiDetailVC, animated: true)
     }
 }
@@ -290,12 +288,14 @@ extension CertiViewController: FSCalendarDelegate, FSCalendarDataSource, FSCalen
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
-        let stringDate = self.collectionHeaderDF.string(from: date)
-        self.selectedDateDelegate?.setLabel(date: stringDate)
+        selectedDate = date
         
-        selectedDate = self.queryDF.string(from: date)
+        let selectedHeaderDateString = self.collectionHeaderDF.string(from: date)
+        self.selectedDateDelegate?.setLabel(date: selectedHeaderDateString)
+        
+        selectedDateString = self.queryDF.string(from: date)
         if let token = UserDefaults.standard.string(forKey: "token") {
-            certiListByCal(token: token, date: selectedDate!)
+            certiListByCal(token: token, date: selectedDateString!)
         }
         
     }

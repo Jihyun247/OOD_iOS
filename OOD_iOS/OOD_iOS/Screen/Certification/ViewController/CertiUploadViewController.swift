@@ -204,9 +204,9 @@ extension CertiUploadViewController: UIImagePickerControllerDelegate & UINavigat
                 
             } else if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
                 print(info)
-                let exifDate = getExifDate(by: info)
+                //let exifDate = getExifDate(by: info)
                 //timeStampLabel.text
-                print(exifDate)
+//                print(exifDate)
             }
         }
         

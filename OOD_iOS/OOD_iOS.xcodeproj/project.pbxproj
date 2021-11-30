@@ -45,6 +45,7 @@
 		B8613509274BDD0A00E25A09 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8613508274BDD0A00E25A09 /* UITextField+Extension.swift */; };
 		B861350B274BDD6500E25A09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B861350A274BDD6500E25A09 /* UIView+Extension.swift */; };
 		B861350D274BE45400E25A09 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B861350C274BE45400E25A09 /* UIFont+Extension.swift */; };
+		B895071827569F70009C6CC9 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895071727569F70009C6CC9 /* MainNavigationViewController.swift */; };
 		B8A0A72E2753263600A3EBBE /* MypageCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0A72D2753263600A3EBBE /* MypageCollectionReusableView.swift */; };
 		B8A0A7302753267B00A3EBBE /* MypageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0A72F2753267B00A3EBBE /* MypageCollectionViewCell.swift */; };
 		B8A0A732275393CC00A3EBBE /* CertiUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A0A731275393CC00A3EBBE /* CertiUploadViewController.swift */; };
@@ -111,6 +112,7 @@
 		B8613508274BDD0A00E25A09 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		B861350A274BDD6500E25A09 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		B861350C274BE45400E25A09 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		B895071727569F70009C6CC9 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		B8A0A72D2753263600A3EBBE /* MypageCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageCollectionReusableView.swift; sourceTree = "<group>"; };
 		B8A0A72F2753267B00A3EBBE /* MypageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B8A0A731275393CC00A3EBBE /* CertiUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiUploadViewController.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				B8A0A731275393CC00A3EBBE /* CertiUploadViewController.swift */,
 				B8A70CFF2753B7870008E519 /* CertiTimeSelectViewController.swift */,
 				B8A70D012753B79F0008E519 /* CertiSelectViewController.swift */,
+				B895071727569F70009C6CC9 /* MainNavigationViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				B808CA72274E4BD800E26484 /* SignupDoneViewController.swift in Sources */,
 				B8A70D0F27543DFB0008E519 /* Date+Extension.swift in Sources */,
 				B808CA70274E298B00E26484 /* SignupSecondViewController.swift in Sources */,
+				B895071827569F70009C6CC9 /* MainNavigationViewController.swift in Sources */,
 				B8A70D0D27543D7A0008E519 /* TimeStampCheckViewController.swift in Sources */,
 				B843F111275207B5004EAC9A /* CertiDetailViewController.swift in Sources */,
 				B843F11A27529AEE004EAC9A /* UILabel+Class.swift in Sources */,
@@ -768,7 +772,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = B849TJY5N4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OOD_iOS/Info.plist;
@@ -802,7 +806,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = B849TJY5N4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OOD_iOS/Info.plist;

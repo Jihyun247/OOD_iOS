@@ -27,7 +27,6 @@ class SignupFirstViewController: UIViewController {
         super.viewDidLoad()
         
         labelContainViewHeight.constant = 120*deviceHeight
-        self.guideLabel.isHidden = false
 
         setTextFieldUI()
         setLabelUI()
@@ -58,7 +57,7 @@ class SignupFirstViewController: UIViewController {
     func setLabelUI() {
         guideLabel.font = UIFont.notoSansMedium(size: 12.0)
         guideLabel.textColor = UIColor(named: "OOD_blue")
-        guideLabel.isHidden = true
+        guideLabel.isHidden = false
         
         explainLabel.font = UIFont.notoSansMedium(size: 16.0)
         explainLabel.textColor = .black

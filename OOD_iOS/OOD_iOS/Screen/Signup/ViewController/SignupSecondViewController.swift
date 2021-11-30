@@ -32,6 +32,11 @@ class SignupSecondViewController: UIViewController {
         createToolbar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guideLabel.isHidden = true
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -102,6 +107,7 @@ class SignupSecondViewController: UIViewController {
     }
     
     @IBAction func doneButtonClicked(_ sender: UIButton) {
+        
         if let exCycle = exCycleTextField.text, let exCycleInt = pickerDictionary[exCycle] {
             signup(nickname: nickname!, email: email!, password: password!, exCycle: exCycleInt)
         }
