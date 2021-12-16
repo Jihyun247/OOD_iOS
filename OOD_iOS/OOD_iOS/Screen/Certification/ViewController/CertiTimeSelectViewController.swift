@@ -15,13 +15,14 @@ class CertiTimeSelectViewController: UIViewController  {
     var timestampImage: UIImage?
     var exTime: String?
     let dropdown = DropDown()
-    
+
     @IBOutlet weak var naviTitleLabel: UILabel!
     @IBOutlet weak var dropdownView: UIView!
     @IBOutlet weak var uploadedImageView: UIImageView!
     @IBOutlet weak var timeGuideLabel: UILabel!
     @IBOutlet weak var selectTimeLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var dropdownArrowImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +38,14 @@ class CertiTimeSelectViewController: UIViewController  {
         super.viewWillAppear(animated)
         
         NotificationCenter.default.addObserver(self, selector: #selector(snapImageUploaded(notification:)), name: NSNotification.Name("snapImageUploaded"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(changedropBtn(notification:)), name: NSNotification.Name("changedropBtn"), object: nil)
+        
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name("snapImageUploaded"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("changedropBtn"), object: nil)
     }
     
     @objc func snapImageUploaded(notification: NSNotification) {
@@ -51,6 +56,10 @@ class CertiTimeSelectViewController: UIViewController  {
             
             setNextBtnStatus()
         }
+    }
+    
+    @objc func changedropBtn(notification: NSNotification) {
+        dropdownArrowImageView.image = UIImage(named: "dropdown")
     }
     
     func setLabel() {
@@ -73,6 +82,8 @@ class CertiTimeSelectViewController: UIViewController  {
         dropdown.bottomOffset = CGPoint(x: 0, y: (dropdown.anchorView?.plainView.bounds.height)!)
         dropdown.direction = .bottom
         dropdown.shadowOpacity = 0
+        
+        dropdownArrowImageView.image = UIImage(named: "dropdown")
         
         // 드롭다운 메뉴 선택 시
         dropdown.selectionAction = { [unowned self] (index: Int, item: String) in
@@ -123,10 +134,7 @@ class CertiTimeSelectViewController: UIViewController  {
     @IBAction func dropdownBtnClicked(_ sender: UIButton) {
         dropdown.show()
         dropdown.show(onTopOf: dropdown.window, beforeTransform: CGAffineTransform(scaleX: 1.0, y: 1.0), anchorPoint: CGPoint(x: 0, y: (dropdown.anchorView?.plainView.bounds.height)!))
+        dropdownArrowImageView.image = UIImage(named: "dropup")
     }
-    
-    
-    
-    
 
 }

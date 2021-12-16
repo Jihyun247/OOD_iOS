@@ -44,7 +44,7 @@ class TimeStampCheckViewController: UIViewController {
         }
         
         timestampBorderView.backgroundColor = .clear
-        timestampBorderView.setBorderColorAndRadius(borderColor: .white, borderWidth: 1, cornerRadius: 2)
+        //timestampBorderView.setBorderColorAndRadius(borderColor: .white, borderWidth: 1, cornerRadius: 2)
         
         resnapButton.titleLabel?.font = UIFont.notoSansMedium(size: 17)
         resnapButton.tintColor = UIColor(named: "OOD_purple")

@@ -269,8 +269,8 @@ extension CertiSelectViewController {
             sender.isSelected = true
             btnIndex = btnCollection!.firstIndex(of: sender)
             
-            sender.tintColor = .white
-            sender.backgroundColor = UIColor(named: "OOD_blue")
+            sender.setTitleColor(.white, for: .selected)
+            sender.setBackgroundColor(UIColor(named: "OOD_blue")!, for: .selected)
             
         } else { // 이미 하나 선택되어 있는 상태
             
@@ -279,8 +279,8 @@ extension CertiSelectViewController {
                 sender.isSelected = false
                 btnIndex = nil
                 
-                sender.tintColor = .lightGray
-                sender.backgroundColor = .white
+                sender.setTitleColor(.lightGray, for: .normal)
+                sender.setBackgroundColor(.white, for: .normal)
                 
                 
             } else { // 다른 타임스탬프 선택
@@ -288,15 +288,16 @@ extension CertiSelectViewController {
                 for idx in btnCollection!.indices {
                     btnCollection![idx].isSelected = false
                     
-                    btnCollection![idx].tintColor = .lightGray
-                    btnCollection![idx].backgroundColor = .white
+                    btnCollection![idx].setTitleColor(.lightGray, for: .normal)
+
+                    btnCollection![idx].setBackgroundColor(.white, for: .normal)
                 }
                 
                 sender.isSelected = true
                 btnIndex = btnCollection!.firstIndex(of: sender)
                 
-                sender.tintColor = .white
-                sender.backgroundColor = UIColor(named: "OOD_blue")
+                sender.setTitleColor(.white, for: .selected)
+                sender.setBackgroundColor(UIColor(named: "OOD_blue")!, for: .selected)
             }
         }
         doneButtonObserver()

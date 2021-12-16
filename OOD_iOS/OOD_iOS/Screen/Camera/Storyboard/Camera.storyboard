@@ -27,7 +27,7 @@
                                             <constraint firstAttribute="width" secondItem="FAF-bm-pgg" secondAttribute="height" id="crj-af-cpf"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="addCertiBtn"/>
+                                        <state key="normal" image="shutter"/>
                                         <connections>
                                             <action selector="cameraBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="U69-Ie-toJ"/>
                                         </connections>
@@ -290,7 +290,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="addCertiBtn" width="64" height="64"/>
+        <image name="shutter" width="78" height="78"/>
         <namedColor name="OOD_purple">
             <color red="0.50199997425079346" green="0.49399998784065247" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

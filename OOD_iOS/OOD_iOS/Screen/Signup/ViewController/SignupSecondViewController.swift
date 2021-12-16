@@ -18,6 +18,7 @@ class SignupSecondViewController: UIViewController {
     var signupData: SignupData?
     
     @IBOutlet weak var exCycleTextField: UITextField!
+    @IBOutlet weak var moveToPageBtn: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var guideLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
@@ -64,6 +65,9 @@ class SignupSecondViewController: UIViewController {
     }
     
     func setButtonUI() {
+        
+        moveToPageBtn.titleLabel?.font = UIFont.notoSansMedium(size: 12)
+        
         doneButton.applyGradient(colors: [UIColor(named: "OOD_purple")?.cgColor, UIColor(named: "OOD_blue")?.cgColor])
         doneButton.setBorderColorAndRadius(borderColor: nil, borderWidth: 0, cornerRadius: 8.0)
         let doneBtnTitle = NSMutableAttributedString(string: "완료")
@@ -106,10 +110,25 @@ class SignupSecondViewController: UIViewController {
         }
     }
     
+    @IBAction func moveToPageBtnClicked(_ sender: UIButton) {
+        guard let url = URL(string: "https://longhaired-middle-9c1.notion.site/37861210bb2546599242881a54f67df8"), UIApplication.shared.canOpenURL(url) else {return}
+        UIApplication.shared.open(url)
+    }
+    
+    
     @IBAction func doneButtonClicked(_ sender: UIButton) {
         
-        if let exCycle = exCycleTextField.text, let exCycleInt = pickerDictionary[exCycle] {
-            signup(nickname: nickname!, email: email!, password: password!, exCycle: exCycleInt)
+        
+        if let userNickname = nickname, let userEmail = email, let userPwd = password, let exCycle = exCycleTextField.text, let exCycleInt = pickerDictionary[exCycle] {
+            
+            if userNickname.count <= 8 {
+                signup(nickname: userNickname, email: userEmail, password: userPwd, exCycle: exCycleInt)
+            } else {
+                showGuideLabel("닉네임은 최대 8글자로 설정해주세요")
+            }
+            
+        } else {
+            showGuideLabel("정보를 모두 입력해주세요")
         }
     }
     

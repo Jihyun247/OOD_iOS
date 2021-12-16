@@ -11,6 +11,9 @@ class CertiDetailViewController: UIViewController {
     
     let grey = UIColor(red: 221/255, green: 225/255, blue: 229/255, alpha: 1)
     
+    var naviTitleDF = DateFormatter()
+    var selectedDate: Date?
+    
     let deviceHeight = UIScreen.main.bounds.height / 896
     var token: String?
     var certiId: Int?
@@ -72,45 +75,48 @@ class CertiDetailViewController: UIViewController {
     func setLabel(certi: Certi) {
         
         // need to fix 레이블 컬렉션으로 다 바꾸기
-        naviTitleLabel.font = UIFont.notoSansMedium(size: 18)
-        exTimeGuideLabel.font = UIFont.notoSansMedium(size: 18)
-        certiSportGuideLabel.font = UIFont.notoSansMedium(size: 18)
-        exIntensityGuideLabel.font = UIFont.notoSansMedium(size: 18)
-        exEvaluGuideLabel.font = UIFont.notoSansMedium(size: 18)
-        exCommentGuideLabel.font = UIFont.notoSansMedium(size: 18)
+        naviTitleLabel.font = UIFont.notoSansMedium(size: 16)
+        exTimeGuideLabel.font = UIFont.notoSansMedium(size: 16)
+        certiSportGuideLabel.font = UIFont.notoSansMedium(size: 16)
+        exIntensityGuideLabel.font = UIFont.notoSansMedium(size: 16)
+        exEvaluGuideLabel.font = UIFont.notoSansMedium(size: 16)
+        exCommentGuideLabel.font = UIFont.notoSansMedium(size: 16)
         
         let OOD_purple = UIColor(named: "OOD_purple")
         
-        naviTitleLabel.text = certi.parseDate
+        naviTitleDF.locale = Locale(identifier: "ko")
+        naviTitleDF.dateFormat = "M월 d일"
+        let naviTitle = self.naviTitleDF.string(from: selectedDate ?? Date())
+        naviTitleLabel.text = naviTitle
         naviTitleLabel.font = UIFont.notoSansMedium(size: 18)
         
         exTimeLabel.text = certi.exTime
         exTimeLabel.setBorderColorAndRadius(borderColor: OOD_purple, borderWidth: 1, cornerRadius: 2)
-        exTimeLabel.font = UIFont.notoSansMedium(size: 16)
+        exTimeLabel.font = UIFont.notoSansMedium(size: 14)
         
         certiSportLabel.text = certi.certiSport
         certiSportLabel.setBorderColorAndRadius(borderColor: OOD_purple, borderWidth: 1, cornerRadius: 2)
-        certiSportLabel.font = UIFont.notoSansMedium(size: 16)
+        certiSportLabel.font = UIFont.notoSansMedium(size: 14)
         
         exIntensityLabel.text = certi.exIntensity
         exIntensityLabel.setBorderColorAndRadius(borderColor: OOD_purple, borderWidth: 1, cornerRadius: 2)
-        exIntensityLabel.font = UIFont.notoSansMedium(size: 16)
+        exIntensityLabel.font = UIFont.notoSansMedium(size: 14)
         
         exEvaluLabel.text = certi.exEvalu
         exEvaluLabel.setBorderColorAndRadius(borderColor: OOD_purple, borderWidth: 1, cornerRadius: 2)
-        exEvaluLabel.font = UIFont.notoSansMedium(size: 16)
+        exEvaluLabel.font = UIFont.notoSansMedium(size: 14)
         
         exCommentTextView.text = certi.exComment
-        exCommentTextView.font = UIFont.notoSansMedium(size: 16)
+        exCommentTextView.font = UIFont.notoSansMedium(size: 14)
     }
     
     func setTextView() {
         
         exCommentTextView.setBorderColorAndRadius(borderColor: grey, borderWidth: 1, cornerRadius: 0)
         exCommentTextView.textContainerInset = UIEdgeInsets(top: 14, left: 14, bottom: 14, right: 14)
-        exCommentTextView.font = UIFont.notoSansMedium(size: 16)
         exCommentTextView.isEditable = false
     }
+    
     func setImageView(imageUrl: String) {
         
         imageContainViewHeight.constant = deviceHeight * 400

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gwL-WW-SlV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vde-QF-eaB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="97" width="414" height="799"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="562-7h-30n">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="815.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="795.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pj2-u8-Jwj">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
@@ -68,19 +68,19 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zN-CO-33a" customClass="FSCalendar">
-                                                <rect key="frame" x="0.0" y="220" width="414" height="120"/>
+                                                <rect key="frame" x="0.0" y="200" width="414" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="2Bl-80-HnK"/>
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noCerti" translatesAutoresizingMaskIntoConstraints="NO" id="wVA-a5-KF5">
-                                                <rect key="frame" x="160.5" y="526.5" width="93" height="139"/>
+                                                <rect key="frame" x="160.5" y="506.5" width="93" height="139"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="wVA-a5-KF5" secondAttribute="height" multiplier="93:139" id="3gk-nV-hjj"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록이 없어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVX-Ce-Cb1">
-                                                <rect key="frame" x="132" y="480" width="150" height="21.5"/>
+                                                <rect key="frame" x="132" y="460" width="150" height="21.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="AzE-Wq-nGx"/>
                                                 </constraints>
@@ -89,7 +89,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AeL-aM-aQa">
-                                                <rect key="frame" x="0.0" y="340" width="414" height="475.5"/>
+                                                <rect key="frame" x="0.0" y="320" width="414" height="475.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="475.5" id="Tak-s0-3lj"/>
@@ -135,10 +135,10 @@
                                                 </collectionReusableView>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAL-P9-4Op">
-                                                <rect key="frame" x="0.0" y="140" width="414" height="80"/>
+                                                <rect key="frame" x="0.0" y="140" width="414" height="60"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7M-YN-6g5">
-                                                        <rect key="frame" x="345" y="0.0" width="69" height="80"/>
+                                                        <rect key="frame" x="345" y="0.0" width="69" height="60"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="nextBtn"/>
                                                         <connections>
@@ -146,13 +146,13 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021년 11월" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaV-mf-Kcz">
-                                                        <rect key="frame" x="69" y="0.0" width="276" height="80"/>
+                                                        <rect key="frame" x="69" y="0.0" width="276" height="60"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEf-AN-PIg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="80"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="60"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="prevBtn"/>
                                                         <connections>
@@ -166,7 +166,7 @@
                                                     <constraint firstItem="DEf-AN-PIg" firstAttribute="top" secondItem="VAL-P9-4Op" secondAttribute="top" id="CJY-1l-9L6"/>
                                                     <constraint firstItem="p7M-YN-6g5" firstAttribute="leading" secondItem="PaV-mf-Kcz" secondAttribute="trailing" id="Noy-Jl-q39"/>
                                                     <constraint firstItem="DEf-AN-PIg" firstAttribute="leading" secondItem="VAL-P9-4Op" secondAttribute="leading" id="TPA-Ua-1Gy"/>
-                                                    <constraint firstAttribute="height" constant="80" id="UA7-V9-cLS"/>
+                                                    <constraint firstAttribute="height" constant="60" id="UA7-V9-cLS"/>
                                                     <constraint firstAttribute="bottom" secondItem="p7M-YN-6g5" secondAttribute="bottom" id="ULc-45-Xis"/>
                                                     <constraint firstAttribute="bottom" secondItem="DEf-AN-PIg" secondAttribute="bottom" id="YnK-MD-qbX"/>
                                                     <constraint firstItem="p7M-YN-6g5" firstAttribute="top" secondItem="VAL-P9-4Op" secondAttribute="top" id="adU-lO-bGC"/>
@@ -220,9 +220,9 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="person" catalog="system"/>
+                                        <state key="normal" image="ic_setting"/>
                                         <connections>
-                                            <action selector="mypageButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Cbi-KG-5sK"/>
+                                            <action selector="settingButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sc1-xk-X43"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -649,7 +649,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y2Y-P2-gku">
                                 <rect key="frame" x="72.5" y="117" width="269" height="269"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="LW7-3Q-QkU">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="LW7-3Q-QkU">
                                         <rect key="frame" x="108.5" y="108.5" width="52" height="51.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 운동 사진 찍기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LrW-au-tk3">
@@ -746,7 +746,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropBtn" translatesAutoresizingMaskIntoConstraints="NO" id="uzk-iw-395">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="uzk-iw-395">
                                         <rect key="frame" x="326" y="14.5" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="16" id="0Kg-Aa-ZrP"/>
@@ -801,6 +801,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dropdownArrowImageView" destination="uzk-iw-395" id="R3R-EE-Ktw"/>
                         <outlet property="dropdownView" destination="gJ6-RV-UOP" id="Wsg-tY-kTG"/>
                         <outlet property="naviTitleLabel" destination="Fsz-EE-zLg" id="uob-It-V5a"/>
                         <outlet property="nextButton" destination="F8H-mb-lUD" id="rmF-Pf-BR5"/>
@@ -1627,13 +1628,14 @@
         <image name="addCertiBtn" width="64" height="64"/>
         <image name="addPhoto" width="43" height="43"/>
         <image name="backbtn" width="13" height="20.5"/>
-        <image name="dropBtn" width="12" height="7.5"/>
+        <image name="camera" width="20" height="18"/>
+        <image name="dropdown" width="12" height="7.5"/>
         <image name="ic_barbell" width="72" height="72"/>
         <image name="ic_comment" width="72" height="72"/>
         <image name="ic_fire" width="72" height="72"/>
+        <image name="ic_setting" width="18" height="18.5"/>
         <image name="nextBtn" width="10.5" height="16"/>
         <image name="noCerti" width="93" height="139"/>
-        <image name="person" catalog="system" width="128" height="117"/>
         <image name="prevBtn" width="10.5" height="16"/>
         <image name="selectIcon" width="72" height="72"/>
         <image name="speechBalloon" width="251" height="72"/>

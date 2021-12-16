@@ -33,7 +33,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         if let token = UserDefaults.standard.string(forKey: "token") {
-            print("저장되어있는데?", token)
+            guard let mainNVC = UIStoryboard(name: "Certification", bundle: nil).instantiateViewController(withIdentifier: "MainNavigationViewController") as? MainNavigationViewController else {return}
+            mainNVC.modalPresentationStyle = .fullScreen
+            self.present(mainNVC, animated: false, completion: nil)
         }
         
         logoContainViewHeight.constant = deviceHeight * 388

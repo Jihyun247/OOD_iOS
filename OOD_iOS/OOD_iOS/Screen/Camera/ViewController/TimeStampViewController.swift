@@ -62,7 +62,7 @@ class TimeStampViewController: UIViewController {
         nowTimeLabel()
         
         timestampBorderVIew.backgroundColor = .clear
-        timestampBorderVIew.setBorderColorAndRadius(borderColor: .white, borderWidth: 1, cornerRadius: 2)
+        //timestampBorderVIew.setBorderColorAndRadius(borderColor: .white, borderWidth: 1, cornerRadius: 2)
         
         cancelButton.titleLabel?.font = UIFont.notoSansMedium(size: 17)
         cancelButton.tintColor = UIColor(named: "OOD_purple")

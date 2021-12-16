@@ -29,8 +29,6 @@
 		B85D61DB274A4696008DFFB3 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D61DA274A4696008DFFB3 /* MypageViewController.swift */; };
 		B85D61DE274A46A5008DFFB3 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B85D61DD274A46A5008DFFB3 /* Setting.storyboard */; };
 		B85D61E0274A46AE008DFFB3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D61DF274A46AE008DFFB3 /* SettingViewController.swift */; };
-		B85D61E3274A48F5008DFFB3 /* PostCerti.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B85D61E2274A48F5008DFFB3 /* PostCerti.storyboard */; };
-		B85D61E5274A48FF008DFFB3 /* PostCertiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D61E4274A48FF008DFFB3 /* PostCertiViewController.swift */; };
 		B85D61F3274A49BF008DFFB3 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B85D61F2274A49BF008DFFB3 /* Signup.storyboard */; };
 		B85D61F5274A49C7008DFFB3 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D61F4274A49C7008DFFB3 /* SignupViewController.swift */; };
 		B85D61F7274A4CC0008DFFB3 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B85D61F6274A4CC0008DFFB3 /* NotoSansKR-Bold.otf */; };
@@ -73,6 +71,7 @@
 		B8C6EC2D274F86D700391136 /* CertiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C6EC2B274F86D700391136 /* CertiCollectionViewCell.xib */; };
 		B8C6EC2F274F9D0000391136 /* CertiCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C6EC2E274F9D0000391136 /* CertiCollectionReusableView.swift */; };
 		B8C6EC32274FBFD300391136 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B8C6EC31274FBFD300391136 /* FSCalendar */; };
+		B8DAC8632758C965004A75A3 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DAC8612758C965004A75A3 /* SettingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,8 +96,6 @@
 		B85D61DA274A4696008DFFB3 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		B85D61DD274A46A5008DFFB3 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		B85D61DF274A46AE008DFFB3 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		B85D61E2274A48F5008DFFB3 /* PostCerti.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostCerti.storyboard; sourceTree = "<group>"; };
-		B85D61E4274A48FF008DFFB3 /* PostCertiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCertiViewController.swift; sourceTree = "<group>"; };
 		B85D61F2274A49BF008DFFB3 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		B85D61F4274A49C7008DFFB3 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		B85D61F6274A4CC0008DFFB3 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
@@ -140,6 +137,7 @@
 		B8C6EC2A274F86D700391136 /* CertiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiCollectionViewCell.swift; sourceTree = "<group>"; };
 		B8C6EC2B274F86D700391136 /* CertiCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CertiCollectionViewCell.xib; sourceTree = "<group>"; };
 		B8C6EC2E274F9D0000391136 /* CertiCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertiCollectionReusableView.swift; sourceTree = "<group>"; };
+		B8DAC8612758C965004A75A3 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				B8A70D03275430650008E519 /* Camera */,
-				B85D61E1274A48DE008DFFB3 /* PostCerti */,
 				B85D61DC274A469C008DFFB3 /* Setting */,
 				B85D61D7274A4680008DFFB3 /* Mypage */,
 				B85D61D1274A4629008DFFB3 /* Certification */,
@@ -286,35 +283,11 @@
 		B85D61DC274A469C008DFFB3 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				B8DAC85A2758BDDB004A75A3 /* Cell */,
 				B85D61E9274A4940008DFFB3 /* Storyboard */,
 				B85D61E8274A4938008DFFB3 /* ViewController */,
 			);
 			path = Setting;
-			sourceTree = "<group>";
-		};
-		B85D61E1274A48DE008DFFB3 /* PostCerti */ = {
-			isa = PBXGroup;
-			children = (
-				B85D61E7274A492D008DFFB3 /* ViewController */,
-				B85D61E6274A4922008DFFB3 /* Storyboard */,
-			);
-			path = PostCerti;
-			sourceTree = "<group>";
-		};
-		B85D61E6274A4922008DFFB3 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				B85D61E2274A48F5008DFFB3 /* PostCerti.storyboard */,
-			);
-			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		B85D61E7274A492D008DFFB3 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				B85D61E4274A48FF008DFFB3 /* PostCertiViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		B85D61E8274A4938008DFFB3 /* ViewController */ = {
@@ -483,6 +456,14 @@
 			path = OOD_iOS;
 			sourceTree = "<group>";
 		};
+		B8DAC85A2758BDDB004A75A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B8DAC8612758C965004A75A3 /* SettingTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -553,7 +534,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B85D61E3274A48F5008DFFB3 /* PostCerti.storyboard in Resources */,
 				B85D61D4274A4646008DFFB3 /* Certification.storyboard in Resources */,
 				B85D61D9274A468C008DFFB3 /* Mypage.storyboard in Resources */,
 				B85D61DE274A46A5008DFFB3 /* Setting.storyboard in Resources */,
@@ -599,7 +579,6 @@
 				B85D61E0274A46AE008DFFB3 /* SettingViewController.swift in Sources */,
 				B843F11C2752ADC6004EAC9A /* SimpleResponse.swift in Sources */,
 				B8613505274BB64300E25A09 /* NetworkResult.swift in Sources */,
-				B85D61E5274A48FF008DFFB3 /* PostCertiViewController.swift in Sources */,
 				B861350D274BE45400E25A09 /* UIFont+Extension.swift in Sources */,
 				B843F11427527DD6004EAC9A /* CertiDetailData.swift in Sources */,
 				B8C14D4B2747EC24007C9DEF /* ViewController.swift in Sources */,
@@ -609,6 +588,7 @@
 				B8C14D472747EC24007C9DEF /* AppDelegate.swift in Sources */,
 				B8A70D022753B79F0008E519 /* CertiSelectViewController.swift in Sources */,
 				B8613503274BB61D00E25A09 /* APIService.swift in Sources */,
+				B8DAC8632758C965004A75A3 /* SettingTableViewCell.swift in Sources */,
 				B808CA6C274E259F00E26484 /* SignupPageViewController.swift in Sources */,
 				B8C6EC2F274F9D0000391136 /* CertiCollectionReusableView.swift in Sources */,
 				B808CA6E274E297500E26484 /* SignupFirstViewController.swift in Sources */,
@@ -772,7 +752,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = B849TJY5N4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OOD_iOS/Info.plist;
@@ -781,7 +761,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "타임스탬프 촬영을 위한 카메라 사용 권한";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Certification;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -806,7 +786,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = B849TJY5N4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OOD_iOS/Info.plist;
@@ -815,7 +795,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "타임스탬프 촬영을 위한 카메라 사용 권한";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Certification;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -33,6 +33,7 @@ class CertiViewController: UIViewController{
             certiCollectionView.reloadData()
             
             let selectedHeaderString = self.collectionHeaderDF.string(from: selectedDate)
+            print("didset collection header set label")
             self.selectedDateDelegate?.setLabel(date: selectedHeaderString)
             
             DispatchQueue.main.async {
@@ -85,9 +86,10 @@ class CertiViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    
+        
         if let token = UserDefaults.standard.string(forKey: "token") {
             let todayDateString = self.queryDF.string(from: today)
+            print("viewWillAppear 컬렉션 뷰 서버통신")
             certiListByCal(token: token, date: selectedDateString ?? todayDateString)
         }
     }
@@ -126,7 +128,7 @@ class CertiViewController: UIViewController{
         
         calendarHeaderLabel.text = self.calendarHeaderDF.string(from: calendarView.currentPage)
         
-        calendarViewHeight.constant = deviceHeight * 120
+        calendarViewHeight.constant = deviceHeight * 220
     }
     
     func setDateFormat() {
@@ -199,10 +201,16 @@ class CertiViewController: UIViewController{
         navigationController?.pushViewController(certiUploadVC, animated: true)
     }
     
-    @IBAction func mypageButtonClicked(_ sender: UIButton) {
-        let sb = UIStoryboard.init(name: "Mypage", bundle: nil)
-        guard let mypageVC = sb.instantiateViewController(withIdentifier: "MypageViewController") as? MypageViewController else {return}
-        navigationController?.pushViewController(mypageVC, animated: true)
+//    @IBAction func mypageButtonClicked(_ sender: UIButton) {
+//        let sb = UIStoryboard.init(name: "Mypage", bundle: nil)
+//        guard let mypageVC = sb.instantiateViewController(withIdentifier: "MypageViewController") as? MypageViewController else {return}
+//        navigationController?.pushViewController(mypageVC, animated: true)
+//    }
+    
+    @IBAction func settingButtonClicked(_ sender: UIButton) {
+        let sb = UIStoryboard.init(name: "Setting", bundle: nil)
+        guard let settingVC = sb.instantiateViewController(withIdentifier: "SettingViewController") as? SettingViewController else {return}
+        navigationController?.pushViewController(settingVC, animated: true)
     }
 
 }
@@ -217,7 +225,7 @@ extension CertiViewController: UICollectionViewDelegate, UICollectionViewDataSou
         guard let headerView = certiCollectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CertiCollectionReusableView.identifier, for: indexPath) as? CertiCollectionReusableView else {
             return UICollectionReusableView()
         }
-        print("델리게이트 reloaddata")
+        print("headerView설정 delegate")
         self.selectedDateDelegate = headerView
         headerView.selectedDateLabel.font = UIFont.notoSansMedium(size: 18.0)
         headerView.selectedDateLabel.textColor = .black
@@ -235,7 +243,7 @@ extension CertiViewController: UICollectionViewDelegate, UICollectionViewDataSou
         guard let cell = certiCollectionView.dequeueReusableCell(withReuseIdentifier: "CertiCollectionViewCell", for: indexPath) as? CertiCollectionViewCell else {
             return UICollectionViewCell()
         }
-        
+        print("cell설정 delegate")
         cell.certiImageView.setKFImage(from: certiListData[indexPath.row].imageUrl ?? "")
         cell.certiImageView.contentMode = .scaleAspectFill
         cell.setBorderColorAndRadius(borderColor: .clear, borderWidth: 0, cornerRadius: 8)
@@ -248,6 +256,7 @@ extension CertiViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
         guard let certiDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "CertiDetailViewController") as? CertiDetailViewController else { return}
         
+        certiDetailVC.selectedDate = self.selectedDate
         certiDetailVC.certiId = certiListData[indexPath.row].id
         navigationController?.pushViewController(certiDetailVC, animated: true)
     }
@@ -289,12 +298,13 @@ extension CertiViewController: FSCalendarDelegate, FSCalendarDataSource, FSCalen
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
         selectedDate = date
-        
+        print("날짜선택 collection header set label")
         let selectedHeaderDateString = self.collectionHeaderDF.string(from: date)
         self.selectedDateDelegate?.setLabel(date: selectedHeaderDateString)
         
         selectedDateString = self.queryDF.string(from: date)
         if let token = UserDefaults.standard.string(forKey: "token") {
+            print("날짜 선택 시 컬렉션 뷰 서버통신")
             certiListByCal(token: token, date: selectedDateString!)
         }
         
@@ -302,6 +312,12 @@ extension CertiViewController: FSCalendarDelegate, FSCalendarDataSource, FSCalen
     
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         self.calendarHeaderLabel.text = self.calendarHeaderDF.string(from: calendarView.currentPage)
+    }
+    
+    func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
+        self.calendarViewHeight.constant = bounds.height
+        print(bounds.height)
+        self.view.layoutIfNeeded()
     }
 
     
