@@ -11,9 +11,6 @@ class CertiDetailViewController: UIViewController {
     
     let grey = UIColor(red: 221/255, green: 225/255, blue: 229/255, alpha: 1)
     
-    var naviTitleDF = DateFormatter()
-    var selectedDate: Date?
-    
     let deviceHeight = UIScreen.main.bounds.height / 896
     var token: String?
     var certiId: Int?
@@ -57,7 +54,7 @@ class CertiDetailViewController: UIViewController {
     }
     
     func certiDetail(token: String, id: Int) {
-        APIService.shared.certiListByCal(token: token, certiId: certiId!) { result in
+        APIService.shared.certiDetail(token: token, certiId: certiId!) { result in
             switch result {
             case .success(let resultData):
                 self.certiDetailData = resultData as? CertiDetailData
@@ -84,10 +81,8 @@ class CertiDetailViewController: UIViewController {
         
         let OOD_purple = UIColor(named: "OOD_purple")
         
-        naviTitleDF.locale = Locale(identifier: "ko")
-        naviTitleDF.dateFormat = "M월 d일"
-        let naviTitle = self.naviTitleDF.string(from: selectedDate ?? Date())
-        naviTitleLabel.text = naviTitle
+        // date 고치다가 맘 -> 마페 컬렉션뷰 클릭 시 구현 이어서 하기
+        naviTitleLabel.text = certi.parseDate
         naviTitleLabel.font = UIFont.notoSansMedium(size: 18)
         
         exTimeLabel.text = certi.exTime

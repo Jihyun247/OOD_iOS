@@ -9,6 +9,23 @@ import Foundation
 import UIKit
 
 extension UIView {
+    
+    enum ViewSide {
+    case Left, Right, Top, Bottom
+        }
+    
+    func setBorderCustom(toSide side: ViewSide, withColor color: CGColor, andThickness thickness: CGFloat) {
+    let border = CALayer()
+            border.backgroundColor = color
+    switch side {
+    case .Left: border.frame = CGRect(x: frame.minX, y: frame.minY, width: thickness, height: frame.height); break
+    case .Right: border.frame = CGRect(x: frame.maxX, y: frame.minY, width: thickness, height: frame.height); break
+    case .Top: border.frame = CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: thickness); break
+    case .Bottom: border.frame = CGRect(x: frame.minX, y: frame.maxY, width: frame.width, height: thickness); break
+            }
+            layer.addSublayer(border)
+        }
+    
     func setBorderColorAndRadius(borderColor: UIColor?, borderWidth: CGFloat, cornerRadius: CGFloat) {
         if let bColor = borderColor {self.layer.borderColor = bColor.cgColor}
         self.layer.borderWidth = borderWidth
@@ -24,6 +41,11 @@ extension UIView {
         gradientLayer.endPoint = CGPoint(x: 1, y: 0)
         gradientLayer.frame = self.bounds
         self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func makeCircleCorner(frameHeight: CGFloat) {
+        self.layer.cornerRadius = frameHeight / 2
+        self.layer.masksToBounds = true
     }
     
     func snapShot() -> UIImage {

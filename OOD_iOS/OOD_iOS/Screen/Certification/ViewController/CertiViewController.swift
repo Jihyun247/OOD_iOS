@@ -256,7 +256,6 @@ extension CertiViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
         guard let certiDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "CertiDetailViewController") as? CertiDetailViewController else { return}
         
-        certiDetailVC.selectedDate = self.selectedDate
         certiDetailVC.certiId = certiListData[indexPath.row].id
         navigationController?.pushViewController(certiDetailVC, animated: true)
     }

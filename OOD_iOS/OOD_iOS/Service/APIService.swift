@@ -94,7 +94,31 @@ struct APIService {
         }
     }
     
-    func certiListByCal(token: String, certiId: Int, completion: @escaping (NetworkResult<Any>)->()) {
+    func mypageAllCertiList(token: String, completion: @escaping (NetworkResult<Any>)->()) {
+        
+        let target: APITarget = .mypageAllCertiList(token: token)
+        
+        provider.request(target) { result in
+            switch result {
+            case .success(let response):
+                
+                guard let decodedData = try? JSONDecoder().decode(GenericResponse<[CertiListData]>.self, from: response.data) else {
+                    return completion(.pathErr)
+                }
+
+                guard let data = decodedData.data else {
+                    return completion(.requestErr(decodedData.message ?? ""))
+                }
+                
+                completion(.success(data))
+
+            case .failure(let err):
+                completion(.failure(err))
+            }
+        }
+    }
+    
+    func certiDetail(token: String, certiId: Int, completion: @escaping (NetworkResult<Any>)->()) {
         
         let target: APITarget = .certiDetail(token: token, certiId: certiId)
         

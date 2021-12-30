@@ -179,7 +179,6 @@
                                                                 </state>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="OOD_skyblue"/>
                                                         <constraints>
                                                             <constraint firstItem="U8B-i9-jtB" firstAttribute="leading" secondItem="YYu-ei-xdi" secondAttribute="leading" id="3g8-Pr-KCO"/>
                                                             <constraint firstAttribute="height" constant="46" id="K6r-oI-zCE"/>
@@ -190,6 +189,21 @@
                                                             <constraint firstItem="U8B-i9-jtB" firstAttribute="top" secondItem="YYu-ei-xdi" secondAttribute="top" id="yvP-zL-5xT"/>
                                                         </constraints>
                                                     </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0b-rf-l0y">
+                                                        <rect key="frame" x="364" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="0oq-Qr-wzg"/>
+                                                            <constraint firstAttribute="width" secondItem="l0b-rf-l0y" secondAttribute="height" id="h0B-sr-JMG"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="ic_setting">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="settingBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rML-fI-o2H"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="OOD_blue"/>
                                                 <constraints>
@@ -203,7 +217,9 @@
                                                     <constraint firstItem="tzv-Hq-Rzt" firstAttribute="centerY" secondItem="rip-Bg-2To" secondAttribute="centerY" multiplier="0.43" id="Yi0-Ul-jWV"/>
                                                     <constraint firstItem="YYu-ei-xdi" firstAttribute="leading" secondItem="rip-Bg-2To" secondAttribute="leading" constant="40" id="awn-cO-hN4"/>
                                                     <constraint firstItem="YYu-ei-xdi" firstAttribute="top" secondItem="crr-jD-DDi" secondAttribute="bottom" constant="24" id="fsx-oh-ply"/>
+                                                    <constraint firstAttribute="trailing" secondItem="l0b-rf-l0y" secondAttribute="trailing" id="nEZ-2K-qqB"/>
                                                     <constraint firstItem="crr-jD-DDi" firstAttribute="width" secondItem="rip-Bg-2To" secondAttribute="width" multiplier="0.55" id="q8f-no-i3K"/>
+                                                    <constraint firstItem="l0b-rf-l0y" firstAttribute="top" secondItem="rip-Bg-2To" secondAttribute="top" id="sVJ-oY-RPt"/>
                                                     <constraint firstAttribute="trailing" secondItem="YYu-ei-xdi" secondAttribute="trailing" constant="40" id="uSJ-ml-pfQ"/>
                                                 </constraints>
                                             </view>
@@ -266,9 +282,10 @@
                     <connections>
                         <outlet property="achivementLabel" destination="npd-am-U3P" id="FJt-8h-rxI"/>
                         <outlet property="backButton" destination="6eM-hb-S1x" id="OVu-WC-VAj"/>
-                        <outlet property="btnBackView" destination="YYu-ei-xdi" id="CUi-3B-UWN"/>
                         <outlet property="certiCollectionView" destination="MTP-Qv-S5k" id="3mc-OR-cZw"/>
                         <outlet property="exCycleUpdateBtn" destination="U8B-i9-jtB" id="bue-G0-cCj"/>
+                        <outlet property="exCycleUpdateBtnBackView" destination="YYu-ei-xdi" id="TW7-3J-vtK"/>
+                        <outlet property="myInfoBackView" destination="rip-Bg-2To" id="7ut-ik-mXY"/>
                         <outlet property="recordNumLabel" destination="eFl-hL-Qaa" id="orl-gE-z93"/>
                         <outlet property="userImgView" destination="tzv-Hq-Rzt" id="3YU-Ie-Ahh"/>
                         <outlet property="userNicknameLabel" destination="5n8-gA-fRq" id="UxL-V1-YKq"/>
@@ -283,11 +300,9 @@
     <resources>
         <image name="backbtn" width="13" height="20.5"/>
         <image name="ic_fav" width="18" height="18"/>
+        <image name="ic_setting" width="18" height="18.5"/>
         <namedColor name="OOD_blue">
             <color red="0.46299999952316284" green="0.57999998331069946" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="OOD_skyblue">
-            <color red="0.53700000047683716" green="0.85100001096725464" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

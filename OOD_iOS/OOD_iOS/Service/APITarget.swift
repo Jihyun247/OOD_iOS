@@ -18,7 +18,7 @@ enum APITarget { // 토큰 쿼리 파라미터 바디 모두 입력
     case certiDetail(token: String, certiId: Int)
     case certiUpdate(token: String, exTime: String, exIntensity: String, exEvalu: String, exComment: String, certiSport: String, certiId: Int)
     case certiDelete(token: String, certiId: Int)
-    case mypageAllCerti(token: String)
+    case mypageAllCertiList(token: String)
     case mypageInfo(token: String)
     case settingExCycle(token: String, exCycle: Int)
 }
@@ -46,7 +46,7 @@ extension APITarget: TargetType {
             return "/certi"
         case .certiDelete(_, let certiId):
             return "/certi/\(certiId)"
-        case .mypageAllCerti:
+        case .mypageAllCertiList:
             return "/mypage"
         case .mypageInfo:
             return "/mypage/info"
@@ -59,7 +59,7 @@ extension APITarget: TargetType {
         switch self {
         case .signup, .signin, .certiContentUpload, .certiImageUpload:
             return .post
-        case .certiByCal, .certiDetail, .mypageAllCerti, .mypageInfo:
+        case .certiByCal, .certiDetail, .mypageAllCertiList, .mypageInfo:
             return .get
         case .certiUpdate, .settingExCycle:
             return .put
@@ -74,7 +74,7 @@ extension APITarget: TargetType {
     
     var task: Task { // 바디는 JSONEncoding.default, 쿼리가 들어가면 URLEncoding.queryString, 이미지는 .uploadMultipart
         switch self {
-        case .certiDetail, .mypageAllCerti, .mypageInfo, .certiDelete:
+        case .certiDetail, .mypageAllCertiList, .mypageInfo, .certiDelete:
             return .requestPlain
         case .certiByCal(_, let date): // 쿼리
             return .requestParameters(parameters: ["date": date], encoding: URLEncoding.queryString)
@@ -100,7 +100,7 @@ extension APITarget: TargetType {
             return ["Content-Type": "application/json"]
         case .certiImageUpload(let token, _, _):
             return ["Content-Type": "multipart/form-data", "token": token]
-        case .certiContentUpload(let token, _,_,_,_,_), .certiByCal(let token, _), .certiDetail(let token, _), .certiUpdate(let token, _,_,_,_,_,_), .certiDelete(let token, _), .mypageAllCerti(let token), .mypageInfo(let token), .settingExCycle(let token, _):
+        case .certiContentUpload(let token, _,_,_,_,_), .certiByCal(let token, _), .certiDetail(let token, _), .certiUpdate(let token, _,_,_,_,_,_), .certiDelete(let token, _), .mypageAllCertiList(let token), .mypageInfo(let token), .settingExCycle(let token, _):
             return ["Content-Type" : "application/json", "token" : token]
         }
     }
