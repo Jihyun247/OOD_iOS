@@ -21,5 +21,4 @@ struct GenericResponse<T: Codable>: Codable {
         message = (try? values.decode(String.self, forKey: .message)) ?? ""
         data = (try? values.decode(T.self, forKey: .data)) ?? nil
     }
-    
 }
