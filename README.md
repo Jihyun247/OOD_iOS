@@ -1,4 +1,4 @@
-# 오늘은 운동해야지 OOD
+# 🏃🏻 오늘은 운동해야지 OOD 🏃🏻‍♀️
 
 **주 n회 운동 목표를 정하여 개인의 '오운완(오늘 운동 완료)' 을 간편하게 기록하는 어플리케이션입니다.**
 
@@ -40,7 +40,34 @@
 
 ## 이슈 및 해결
 
-- 
+**ScrollView 내에 스크롤 방향이 세로인 CollectionView를 배치했을 때 CollectionView만 스크롤 되는 이슈**
+
+```swift
+self.collectionViewHeight.constant = self.certiCollectionView.contentSize.height
+```
+
+ScrollView는 contentLayoutGuide를 통해 자신의 content size를 정확히 알아야 그에 따라 늘어나기 때문에,
+
+서버 통신 후 불러온 결과에 따라 CollectionView cell 혹은 layout에 따라 정해진 CollectionView의 전체 높이 content size.height 를 가져와 CollectionView 의 높이 auto layout을 변경해주어 해결
+
+<br/>
+
+**서버 연결 후 CollectionView cell에 결과값을 띄울 때 CollectionView height 갱신 시점 이슈**
+
+```swift
+var certiListData: [CertiListData] = [] {
+        didSet {
+            certiCollectionView.reloadData()
+            DispatchQueue.main.async {
+                self.collectionViewHeight.constant = self.certiCollectionView.contentSize.height
+            }
+        }
+}
+```
+
+viewDidLoad()에 위치했던 *self.collectionViewHeight.constant = self.certiCollectionView.contentSize.height* 을 서버통신으로 받아오는 CollectionView Cell 정보의 배열인 certiListData의 프로퍼티옵저버 didSet으로 옮겨 해결
+
+
 
 
 
@@ -83,14 +110,3 @@
   > 목표 운동 횟수 기준 현재 달성률 / 총 기록 횟수 / 총 기록 게시물 조회
 
 <img src="https://user-images.githubusercontent.com/59338503/142013538-a8b95e0a-12d2-4b3a-a260-07977b3d0e74.png" alt="마이페이지설정" width="40%" height="40%"/>
-
-<br/>
-
-## 개발일지
-
-https://velog.io/@gaebokchi/series/OOD
-
-## Notion
-
->  https://github.com/Jihyun247/SeSAC_Project1.git
-
